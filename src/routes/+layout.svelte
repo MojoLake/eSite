@@ -13,8 +13,8 @@
         display: flex;
         flex-direction: column;
         min-height: 100vh;
-        color: var(--vanilla-text);
-        background-color: var(--background-blue);
+        color: var(--primary-text-colour);
+        background-color: var(--background-colour);
     }
 
     main {
@@ -22,26 +22,27 @@
     }
 
     nav {
-        background-color: var(--lighter-background-blue);
         margin: auto;
     }
 
     :global(a) {
-        color: var(--vanilla-text);
+        color: var(--primary-text-colour);
     }
 
     a:hover {
-        color: var(--background-blue);
+        color: var(--secondary-text-colour);
     }
 
     ul {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
+        gap: 5rem;
         align-items: center;
         list-style: none;
         padding: 0;
         margin: 0;
-        height: 3rem;
+        height: 4rem;
+        font-size: 2rem;
     }
 
     li {
