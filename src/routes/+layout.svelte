@@ -23,6 +23,7 @@
 
     nav {
         margin: auto;
+        margin-top: 2rem;
     }
 
     :global(a) {
@@ -67,12 +68,18 @@
         padding: 0.25rem 0.25rem;
         border-radius: 0.2rem;
     }
+
+   p {
+        text-align: center;
+        font-size: 1.0rem;
+   }
 </style>
 
 <main>
     <nav>
         <ul>
             <li><a href="/">eHome</a></li>
+            <li><a href="/elias">eLias</a></li>
             <li><a href="/blogs">eBlogs</a></li>
             <li><a href="/projects">eProjects</a></li>
         </ul>
@@ -82,6 +89,10 @@
 
 </main>
 
+<p>
+    If you have any questions or want to chat, please contact me.<br>I (usually)
+    enjoy getting to know new people :).
+</p>
 <ul class="link-list">
     <li>
         <a href="https://github.com/MojoLake">
