@@ -1,6 +1,9 @@
+
+
 <script>
   import FirstBlog from './theblogs/first-blogs.svx'
 </script>
+
 
 <style>
     .blogs {

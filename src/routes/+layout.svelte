@@ -1,6 +1,24 @@
 <script lang="ts">
     import '../app.css';
     let { children } = $props();
+
+    import Icon from '$lib/components/Icon.svelte';
+
+    let desktop = $state(false);
+
+    $effect(() => {
+        const mql = window.matchMedia('(min-width: 777px)');
+
+        desktop = mql.matches;
+
+        const handler = (e: MediaQueryListEvent) => {
+            desktop = e.matches;
+        };
+
+        mql.addEventListener('change', handler);
+
+        return () => mql.removeEventListener('change', handler);
+    });
 </script>
 
 <style>
@@ -21,9 +39,10 @@
         flex: 1;
     }
 
-    nav {
+    .desktop-nav {
         margin: auto;
         margin-top: 2rem;
+        padding: 0 1rem;
     }
 
     :global(a) {
@@ -36,18 +55,15 @@
 
     ul {
         display: flex;
-        justify-content: center;
-        gap: 5rem;
-        align-items: center;
-        list-style: none;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
         padding: 0;
         margin: 0;
-        height: 4rem;
-        font-size: 2rem;
     }
 
     li {
-        display: flex;
+        font-size: 2rem;
+        list-style-type: none;
     }
 
     .link-list {
@@ -69,27 +85,54 @@
         border-radius: 0.2rem;
     }
 
-   p {
+   .bottom-text {
         text-align: center;
         font-size: 1.0rem;
    }
+
+    .menu-button {
+        color: var(--primary-text-colour);
+        background: none;
+        border: none;
+        display: flex;
+        margin: 1rem;
+    }
+
+    .mobile-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .mobile-elias {
+        margin: 1rem;
+    }
+
 </style>
 
 <main>
-    <nav>
-        <ul>
-            <li><a href="/">eHome</a></li>
-            <li><a href="/elias">eLias</a></li>
-            <li><a href="/blogs">eBlogs</a></li>
-            <li><a href="/projects">eProjects</a></li>
-        </ul>
-    </nav>
+    {#if !desktop}
+        <nav class="mobile-nav">
+            <p class="mobile-elias"><span style="color: var(--secondary-text-colour)">elias</span> simojoki </p>
+            <button class="menu-button">
+                <Icon name="hamburger" ariaLabel="Open menu" size={28}/>
+            </button>
+        </nav>
+    {:else}
+        <nav class="desktop-nav">
+            <ul>
+                <li><a href="/">eHome</a></li>
+                <li><a href="/elias">eLias</a></li>
+                <li><a href="/blogs">eBlogs</a></li>
+                <li><a href="/projects">eProjects</a></li>
+            </ul>
+        </nav>
+    {/if}
 
     {@render children?.()}
-
 </main>
 
-<p>
+<p class="bottom-text">
     If you have any questions or want to chat, please contact me.<br>I (usually)
     enjoy getting to know new people :).
 </p>
