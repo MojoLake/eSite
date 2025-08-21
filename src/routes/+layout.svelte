@@ -1,4 +1,6 @@
 <script lang="ts">
+    import { browser } from '$app/environment';
+
     import '../app.css';
     let { children } = $props();
 
@@ -6,25 +8,37 @@
     import { fly } from 'svelte/transition';
 
     import Icon from '$lib/components/Icon.svelte';
-    import DeskTopNavList from '$lib/components/DesktopNavList.svelte';
+    import DesktopNavList from '$lib/components/DesktopNavList.svelte';
     import MobileNavList from '$lib/components/MobileNavList.svelte';
     import Contact from '$lib/components/Contact.svelte';
     import Footnote from '$lib/components/Footnote.svelte';
 
-    let desktop = $state(false);
+    const initialDesktop = browser
+        ? window.matchMedia('(min-width: 930px)').matches
+        : false;
+
+    let desktop = $state(initialDesktop);
     let navbar_open = $state(false);
 
     const handleMenuClick = () => {
         navbar_open = !navbar_open; 
     }
 
+    const handleNameClick = () => {
+        navbar_open = false;
+    };
+
     $effect(() => {
-        const mql = window.matchMedia('(min-width: 777px)');
+        const mql = window.matchMedia('(min-width: 930px)');
 
         desktop = mql.matches;
 
         const handler = (e: MediaQueryListEvent) => {
             desktop = e.matches;
+            if (desktop) {
+                // Desktop does not have a navbar
+                navbar_open = false;
+            }
         };
 
         mql.addEventListener('change', handler);
@@ -36,7 +50,9 @@
 
 <style>
     :global(html, body) {
-        height: 100%;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
         margin: 0;
     }
 
@@ -49,6 +65,8 @@
     }
 
     main {
+        display: flex;
+        flex-direction: column;
         flex: 1;
     }
 
@@ -56,11 +74,17 @@
         color: var(--primary-text-colour);
     }
 
+    .content-shell {
+        position: relative;
+        flex: 1;
+        min-height: 0;
+    }
 
-   .bottom-text {
-        text-align: center;
-        font-size: 1.0rem;
-   }
+    .page-content {
+        height: 100%;
+    }
+
+
 
     .menu-button {
         color: var(--primary-text-colour);
@@ -83,20 +107,27 @@
     }
 
     .mobile-nav-overlay {
-        display: flex;
-        justify-content: center;
+        position: absolute;
+        inset: 0;
+        background-color: var(--background-colour);
     }
 
 
 </style>
 
 <main>
-    {#if !desktop}
-
+    
+    {#if desktop}
+        <DesktopNavList />
+    {:else}
         <div>
             <nav class="mobile-nav">
-                <a href="/">
-                  <p class="mobile-elias"><span style="color: var(--secondary-text-colour)">elias</span> simojoki </p>
+                <a href="/" onclick={handleNameClick}>
+                {#if navbar_open}
+                      <p class="mobile-elias">elias<span style="color: var(--secondary-text-colour)">&nbsp;simojoki</span></p>
+                {:else}
+                      <p class="mobile-elias"><span style="color: var(--secondary-text-colour)">elias</span> simojoki </p>
+                {/if}
                 </a>
 
                 <button class="menu-button" onclick={handleMenuClick}>
@@ -104,31 +135,22 @@
                 </button>
             </nav>
         </div>
-        
-        <!-- We have to check whether the navbar is open or not. -->
+    {/if}
+    
+    <!-- We have to check whether the navbar is open or not. -->
+    <div class="content-shell" class:locked={navbar_open}>
         {#if navbar_open}
-            <div class="mobile-nav-overlay" transition:fade={{ duration: 180 }}>
-            <!-- <div class="mobile-nav-overlay" transition:fly={{ y: 8, duration: 200 }}> -->
-                <MobileNavList/>
+            <div class="mobile-nav-overlay" transition:fade={{ duration: 300 }}>
+            <!-- <div class="mobile-nav-overlay" transition:fly={{ y: 8, duration: 350 }}> -->
+                <MobileNavList onClick={handleNameClick}/>
             </div>
         {/if}
 
-    {:else}
-      <DeskTopNavList/>
-    {/if}
-
-
-    {#if desktop || !navbar_open}
-        {@render children?.()}
-    {/if}
+        <div class="page-content" aria-hidden={navbar_open}>
+            {@render children?.()}
+        </div>
+    </div>
 </main>
 
-{#if desktop || !navbar_open}
-    <p class="bottom-text">
-        If you have any questions or want to chat, please contact me.<br>I (usually)
-        enjoy getting to know new people :).
-    </p>
-
-{/if}
 <Contact/>
 <Footnote/>

@@ -7,7 +7,7 @@
     }
 
     .link-list img {
-        height: 1.5rem;
+        height: 2rem;
     }
 
     li {

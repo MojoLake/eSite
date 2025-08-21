@@ -1,9 +1,24 @@
+<script>
+    export let onClick;
+
+   let items = [
+        { text: 'eHome', href: '/' },
+        { text: 'eLias', href: '/elias' },
+        { text: 'eBlogs', href: '/blogs' },
+        { text: 'eProjects', href: '/projects' },
+    ];
+    
+</script>
+
 <nav>
     <ul>
-        <li><a href="/">eHome</a></li>
-        <li><a href="/elias">eLias</a></li>
-        <li><a href="/blogs">eBlogs</a></li>
-        <li><a href="/projects">eProjects</a></li>
+        {#each items as item}
+            <li>
+                <a href={item.href} on:click={onClick}>
+                    {item.text}
+                </a>
+            </li>
+        {/each}
     </ul>
 </nav>
 
@@ -24,6 +39,7 @@
         padding: var(--nav-ul-padding);
         margin: var(--nav-ul-margin);
         height: var(--nav-ul-height);
+        gap: var(--nav-ul-gap);
     }
 
     li {

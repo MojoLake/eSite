@@ -1,5 +1,7 @@
 <script>
     import NavList from '$lib/components/NavList.svelte';
+
+    export let onClick;
 </script>
 
 <style>
@@ -17,5 +19,5 @@
 </style>
 
 <div class="mobile-nav">
-    <NavList />
+    <NavList onClick={onClick}/>
 </div>
