@@ -117,7 +117,7 @@
 
 <main>
     
-    {#if desktop}
+    {#if desktop && false}
         <DesktopNavList />
     {:else}
         <div>
@@ -131,7 +131,11 @@
                 </a>
 
                 <button class="menu-button" onclick={handleMenuClick}>
-                    <Icon name="hamburger" ariaLabel="Open menu" size={28}/>
+                    {#if navbar_open}
+                        <Icon style="color: var(--secondary-text-colour)" name="ex" ariaLabel="Close menu" size={28}/>
+                    {:else}
+                        <Icon name="hamburger" ariaLabel="Open menu" size={28}/>
+                    {/if}
                 </button>
             </nav>
         </div>
