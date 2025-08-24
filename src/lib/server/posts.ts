@@ -9,7 +9,7 @@ type PostMeta = {
 
 export type Post = {
   post_meta: PostMeta;
-  content: string;
+  content: any;
 };
 
 let _allPosts: PostMeta[] | null = null
@@ -35,9 +35,13 @@ export const getAllPosts = (): PostMeta[] => {
 }
 
 export const getPost = async (slug: string): Promise<Post | null> => {
-  const modules = import.meta.glob('/src/content/blog/*.svx');
-  const loader = modules[`/src/lib/content/blog/${slug}.svx`];
-  if (!loader) return null;
+  console.log(`Slug inside getPost: ${slug}`);
+  const modules = import.meta.glob('/src/lib/content/blogs/*.svx');
+  const loader = modules[`/src/lib/content/blogs/${slug}.svx`];
+  if (!loader) {
+    console.log("Loader not found...");
+    return null;
+  }
   const mod: any = await loader();
   const post_meta = mod.metadata;
   const content = mod.default
