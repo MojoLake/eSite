@@ -1,0 +1,9 @@
+---
+title: "Second blog"
+date: "2025-08-11"
+summary: "This is my second blog."
+tags: [ "svelte"]
+---
+
+This my *second* blog.
+I wish you like it.

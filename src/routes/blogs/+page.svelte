@@ -1,18 +1,16 @@
-
-
-<script>
-  import FirstBlog from './theblogs/first-blogs.svx'
+<script lang="ts">
+    import type { PageData } from "./$types";
+    export let data;
+    const { posts } = data;
 </script>
+
+<h1>Blog</h1>
+{#each posts as post}
+  {post.title}
+  {post.summary}
+  {post.slug}
+{/each}
 
 
 <style>
-    .blogs {
-        display: flex;
-        justify-content: center;
-    }
 </style>
-
-<div class="blogs">
-    <h1>Blogs</h1>
-    <FirstBlog/>
-</div>

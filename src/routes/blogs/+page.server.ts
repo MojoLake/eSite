@@ -1,1 +1,5 @@
-import type { PageServerLoad } from './$types';
+import { getAllPosts } from '$lib/server/posts';
+
+export const load = async () => {
+  return { posts: getAllPosts() };
+};
