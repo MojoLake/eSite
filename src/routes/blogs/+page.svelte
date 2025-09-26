@@ -6,13 +6,18 @@
 
 
 <div class="main">
-    <h1>Blog</h1>
+    <h1>Blogs</h1>
 
     <div class="post">
         {#each posts as post}
-          {post.title}
-          {post.summary}
-          <a href={`/blogs/${post.slug}`}>{post.slug}</a>
+           <a href={`/blogs/${post.slug}`} class="post-link"> 
+                <div class="post">
+                  <h3 class="post-title">
+                      {post.title}
+                  </h3>
+                  {post.summary}
+                </div>
+          </a>
         {/each}
     </div>
 </div>
@@ -26,6 +31,17 @@
         align-items: center;
     }
 
+    .post-link {
+        text-decoration: none;
+    }
+
+    .post-link:hover {
+        text-decoration: underline;
+    }
+
     .post {
+    }
+
+    .post-title {
     }
 </style>

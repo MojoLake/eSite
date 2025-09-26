@@ -37,7 +37,7 @@
 
     <p class="main-text">
       Welcome to the website!
-      Have a deep breath and enjoy.
+      Have a deep breath and enjoy :)
     </p>
 
     <!-- <p class="bottom-text"> -->
