@@ -1,8 +1,5 @@
 <script lang="ts">
   import Yellow from '$lib/components/Yellow.svelte';
-
-  import { slide } from 'svelte/transition';
-  let expanded = false;
 </script>
 
 <style>
