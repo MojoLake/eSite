@@ -1,5 +1,5 @@
 ---
-title: "First blog"
+title: "New weekly routine"
 date: "2025-08-10"
 summary: "Blog about my routines"
 tags: ["intro", "svelte"]
@@ -10,7 +10,7 @@ This summer, I decided to every week try a new habit and if I like it, incorpora
 Here is the current list of habits:....
 
 The best habits have been:
-- Leaving my phone at the entrance and only being allowed to use it for phone calls.
+- Leaving my phone at the entrance and <mark>only</mark> being allowed to use it for phone calls.
 - Daily diary.
 - Waking up
 

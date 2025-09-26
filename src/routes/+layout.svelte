@@ -14,7 +14,7 @@
     import Footnote from '$lib/components/Footnote.svelte';
 
     const initialDesktop = browser
-        ? window.matchMedia('(min-width: 930px)').matches
+        ? window.matchMedia('(min-width: 777px)').matches
         : false;
 
     let desktop = $state(initialDesktop);
@@ -28,16 +28,23 @@
         navbar_open = false;
     };
 
+    const desktop_hamburger_size = 50;
+    const mobile_hamburger_size = 28;
+
+    let hamburger_size = desktop ? desktop_hamburger_size : mobile_hamburger_size;
+
     $effect(() => {
-        const mql = window.matchMedia('(min-width: 930px)');
+        const mql = window.matchMedia('(min-width: 777px)');
 
         desktop = mql.matches;
 
         const handler = (e: MediaQueryListEvent) => {
             desktop = e.matches;
+
             if (desktop) {
-                // Desktop does not have a navbar
-                navbar_open = false;
+              hamburger_size = desktop_hamburger_size;
+            } else {
+              hamburger_size = mobile_hamburger_size;
             }
         };
 
@@ -84,8 +91,6 @@
         height: 100%;
     }
 
-
-
     .menu-button {
         color: var(--primary-text-colour);
         background: none;
@@ -96,56 +101,71 @@
         anchor-name: --hamb;
     }
 
-    .mobile-nav {
+    .nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        width: 100%;
+        max-width: 60rem;
+
+        margin: 0 auto;
     }
 
-    .mobile-elias {
+    .elias {
         margin: 1rem;
+        font-size: 1.2rem;
     }
 
-    .mobile-nav-overlay {
+    @media (min-width: 777px) {
+      .elias {
+        font-size: 2rem;
+      }
+    }
+
+    .nav-overlay {
         position: absolute;
         inset: 0;
         background-color: var(--background-colour);
     }
 
+    .top-content {
+      display: flex;
+      justify-content: space-between;
+      
+      max-width: 200rem;
+      margin: 0 auto;
+    }
 
 </style>
 
 <main>
     
-    {#if desktop}
-        <DesktopNavList />
-    {:else}
-        <div>
-            <nav class="mobile-nav">
-                <a href="/" onclick={handleNameClick}>
-                {#if navbar_open}
-                      <p class="mobile-elias">elias<span style="color: var(--secondary-text-colour)">&nbsp;simojoki</span></p>
-                {:else}
-                      <p class="mobile-elias"><span style="color: var(--secondary-text-colour)">elias</span> simojoki </p>
-                {/if}
-                </a>
+        <nav class="nav">
+            <a href="/" onclick={handleNameClick}>
 
-                <button class="menu-button" onclick={handleMenuClick}>
-                    {#if navbar_open}
-                        <Icon style="color: var(--secondary-text-colour)" name="ex" ariaLabel="Close menu" size={28}/>
-                    {:else}
-                        <Icon name="hamburger" ariaLabel="Open menu" size={28}/>
-                    {/if}
-                </button>
-            </nav>
-        </div>
-    {/if}
+              {#if navbar_open}
+                    <p class="elias">elias<span style="color: var(--secondary-text-colour)">&nbsp;simojoki</span></p>
+              {:else}
+                    <p class="elias"><span style="color: var(--secondary-text-colour)">elias</span> simojoki </p>
+              {/if}
+
+            </a>
+
+            <button class="menu-button" onclick={handleMenuClick}>
+                {#if navbar_open}
+                    <Icon style="color: var(--secondary-text-colour)" name="ex" ariaLabel="Close menu" size={hamburger_size}/>
+                {:else}
+                    <Icon name="hamburger" ariaLabel="Open menu" size={hamburger_size}/>
+                {/if}
+            </button>
+        </nav>
     
     <!-- We have to check whether the navbar is open or not. -->
     <div class="content-shell" class:locked={navbar_open}>
         {#if navbar_open}
-            <div class="mobile-nav-overlay" transition:fade={{ duration: 100 }}>
-            <!-- <div class="mobile-nav-overlay" transition:fly={{ y: 8, duration: 350 }}> -->
+            <div class="nav-overlay" transition:fade={{ duration: 100 }}>
+            <!-- <div class="nav-overlay" transition:fly={{ y: 8, duration: 350 }}> -->
                 <MobileNavList onClick={handleNameClick}/>
             </div>
         {/if}
