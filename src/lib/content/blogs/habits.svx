@@ -3,6 +3,7 @@ title: "New weekly routine"
 date: "2025-9-26"
 summary: "Blog about my routines"
 tags: ["intro", "svelte"]
+published: false
 ---
 
 This summer, I decided to every week try a new habit and if I like it, incorporate it into my life. I write into notion a "TODO-list" of possible future habits and in a separate page I have the habits I'm currently following. In addittion, I have an Anki-deck called "Habits" where I have each habit as a card, so that I remember them :p. 
