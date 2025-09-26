@@ -163,10 +163,9 @@
         </nav>
     
     <!-- We have to check whether the navbar is open or not. -->
-    <div class="content-shell" class:locked={navbar_open}>
+    <div class="content-shell">
         {#if navbar_open}
             <div class="nav-overlay" transition:fade={{ duration: 100 }}>
-            <!-- <div class="nav-overlay" transition:fly={{ y: 8, duration: 350 }}> -->
                 <MobileNavList onClick={handleNameClick}/>
             </div>
         {/if}
@@ -175,7 +174,7 @@
             {@render children?.()}
         </div>
     </div>
-</main>
-
 <Contact/>
 <Footnote/>
+</main>
+
