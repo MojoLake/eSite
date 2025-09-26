@@ -12,6 +12,7 @@
     import MobileNavList from '$lib/components/MobileNavList.svelte';
     import Contact from '$lib/components/Contact.svelte';
     import Footnote from '$lib/components/Footnote.svelte';
+    import Yellow from '$lib/components/Yellow.svelte';
 
     const initialDesktop = browser
         ? window.matchMedia('(min-width: 777px)').matches
@@ -145,9 +146,9 @@
             <a href="/" onclick={handleNameClick}>
 
               {#if navbar_open}
-                    <p class="elias">elias<span style="color: var(--secondary-text-colour)">&nbsp;simojoki</span></p>
+                    <p class="elias">elias<Yellow>&nbsp;simojoki</Yellow></p>
               {:else}
-                    <p class="elias"><span style="color: var(--secondary-text-colour)">elias</span> simojoki </p>
+                    <p class="elias"><Yellow>elias</Yellow> simojoki </p>
               {/if}
 
             </a>
