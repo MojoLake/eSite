@@ -11,6 +11,7 @@
         font-size: 3rem;
         white-space: normal;
         overflow-wrap: break-word;
+        color: var(--primary-title-colour);
    } 
 
    .home {
