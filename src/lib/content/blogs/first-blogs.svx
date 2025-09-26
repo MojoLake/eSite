@@ -1,9 +1,16 @@
 ---
 title: "First blog"
 date: "2025-08-10"
-summary: "This is my first blog."
+summary: "Blog about my routines"
 tags: ["intro", "svelte"]
 ---
 
-This my *first* blog.
-Hope you enjoyed it.
+This summer, I decided to every week try a new habit and if I like it, incorporate it into my life. I write into notion a "TODO-list" of possible future habits and in a separate page I have the habits I'm currently following. In addittion, I have an Anki-deck called "Habits" where I have each habit as a card, so that I remember them :p. 
+
+Here is the current list of habits:....
+
+The best habits have been:
+- Leaving my phone at the entrance and only being allowed to use it for phone calls.
+- Daily diary.
+- Waking up
+

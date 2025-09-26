@@ -117,7 +117,7 @@
 
 <main>
     
-    {#if desktop && false}
+    {#if desktop}
         <DesktopNavList />
     {:else}
         <div>
@@ -144,7 +144,7 @@
     <!-- We have to check whether the navbar is open or not. -->
     <div class="content-shell" class:locked={navbar_open}>
         {#if navbar_open}
-            <div class="mobile-nav-overlay" transition:fade={{ duration: 300 }}>
+            <div class="mobile-nav-overlay" transition:fade={{ duration: 100 }}>
             <!-- <div class="mobile-nav-overlay" transition:fly={{ y: 8, duration: 350 }}> -->
                 <MobileNavList onClick={handleNameClick}/>
             </div>

@@ -1,7 +1,7 @@
 <script lang="ts">
 
   const { data } = $props<{
-    data: { slug: string; title: string; date: string; summary: string; }
+    data: { slug: string; title: string; date: string; summary: string; content: string; }
   }>();
 
   const modules = import.meta.glob('$lib/content/blogs/*.svx');
@@ -13,10 +13,20 @@
     throw new Error(`Omg post not found: ${data.slug}`);
   }
 
-  const { default: content } = await modules[key]();
+  let ContentComponent: any = $state(null);
+
+  $effect(async() => {
+    const mod: any = await modules[key]();
+    ContentComponent = mod.default;
+  });
+
 </script>
 
 <h1>{data.title}</h1>
 {data.summary}
-<svelte:component this={content} />
-
+moi
+moi
+{#if ContentComponent}
+  
+  <svelte:component this={ContentComponent} />
+{/if}

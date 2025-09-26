@@ -18,7 +18,7 @@ const loadAllPostsOnce = (): PostMeta[] => {
   const modules = import.meta.glob('/src/lib/content/blogs/*.svx', { eager: true });
 
   const posts = Object.entries(modules).map(([path, mod]: any) => {
-    const slug = path.split('/').pop()?.replace('svx', '');
+    const slug = path.split('/').pop()?.replace('.svx', '');
     const { title, date, summary, tags, published = true } = mod.metadata || {};
     return { slug, title, date, summary, tags, published} satisfies PostMeta;
   })
@@ -44,7 +44,7 @@ export const getPost = async (slug: string): Promise<Post | null> => {
   }
   const mod: any = await loader();
   const post_meta = mod.metadata;
-  const content = mod.default
+  const content = mod.default;
   return { post_meta, content } satisfies Post;
 }
 
