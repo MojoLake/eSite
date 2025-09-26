@@ -6,7 +6,7 @@
 
 <style>
     .mobile-nav {
-        --nav-height: calc(100vh - 12rem);
+        --nav-height: calc(100dvh - 12rem);
     
         --nav-ul-display: flex;
         --nav-ul-flex-direction: column;
