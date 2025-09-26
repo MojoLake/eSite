@@ -36,6 +36,7 @@
 
     .page-title {
         text-align: center;
+        color: var(--primary-title-colour);
     }
 
     .post-link {

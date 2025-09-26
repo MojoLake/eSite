@@ -7,6 +7,7 @@
         font-size: 4rem;
         white-space: normal;
         overflow-wrap: break-word;
+        color: var(--primary-title-colour);
    } 
 
    .home {
@@ -39,9 +40,5 @@
       Welcome to the website!
       Have a deep breath and enjoy :)
     </p>
-
-    <!-- <p class="bottom-text"> -->
-    <!--     If you have any questions or want to chat, please contact me :) -->
-    <!-- </p> -->
 </div>
 

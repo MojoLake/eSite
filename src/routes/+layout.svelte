@@ -93,7 +93,7 @@
     }
 
     .menu-button {
-        color: var(--primary-text-colour);
+        color: var(--primary-title-colour);
         background: none;
         border: none;
         display: flex;
@@ -116,6 +116,7 @@
     .elias {
         margin: 1rem;
         font-size: 1.2rem;
+        color: var(--primary-title-colour);
     }
 
     @media (min-width: 777px) {
@@ -166,7 +167,6 @@
     <div class="content-shell" class:locked={navbar_open}>
         {#if navbar_open}
             <div class="nav-overlay" transition:fade={{ duration: 100 }}>
-            <!-- <div class="nav-overlay" transition:fly={{ y: 8, duration: 350 }}> -->
                 <MobileNavList onClick={handleNameClick}/>
             </div>
         {/if}

@@ -47,6 +47,10 @@
         list-style-type: none;
     }
 
+    a {
+      color: var(--primary-title-colour);
+    }
+
     a:hover {
         color: var(--secondary-text-colour);
     }
