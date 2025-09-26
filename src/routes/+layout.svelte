@@ -164,7 +164,7 @@
         </nav>
     
     <!-- We have to check whether the navbar is open or not. -->
-    <div class="content-shell" class:locked={navbar_open}>
+    <div class="content-shell">
         {#if navbar_open}
             <div class="nav-overlay" transition:fade={{ duration: 100 }}>
                 <MobileNavList onClick={handleNameClick}/>
@@ -175,7 +175,7 @@
             {@render children?.()}
         </div>
     </div>
-</main>
-
 <Contact/>
 <Footnote/>
+</main>
+
