@@ -1,12 +1,14 @@
 <script lang="ts">
     import type { PageData } from "./$types";
+    import Yellow from '$lib/components/Yellow.svelte';
+
     export let data;
     const { posts } = data;
 </script>
 
 
 <div class="main">
-    <h1>Blogs</h1>
+    <h1 class="page-title">My (currently few) <Yellow>blog</Yellow> posts</h1>
 
     <div class="post">
         {#each posts as post}
@@ -15,7 +17,7 @@
                   <h3 class="post-title">
                       {post.title}
                   </h3>
-                  {post.summary}
+                  &nbsp;{post.summary}
                 </div>
           </a>
         {/each}
@@ -29,6 +31,11 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding: 0 0.5rem;
+    }
+
+    .page-title {
+        text-align: center;
     }
 
     .post-link {
@@ -39,9 +46,8 @@
         text-decoration: underline;
     }
 
-    .post {
+    .post-title {
+        color: var(--secondary-text-colour);
     }
 
-    .post-title {
-    }
 </style>

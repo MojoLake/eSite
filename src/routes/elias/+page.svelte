@@ -8,7 +8,7 @@
 <style>
    h1 {
         text-align: center;
-        font-size: 4rem;
+        font-size: 3rem;
         white-space: normal;
         overflow-wrap: break-word;
    } 
@@ -22,8 +22,8 @@
    }
 
    .main-text {
-      font-size: 1.5rem;
-      margin: auto 0.1rem;
+      font-size: 1rem;
+      margin: auto 1rem;
    }
 
    .bottom-text {
