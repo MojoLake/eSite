@@ -48,7 +48,7 @@
         <li>Background in competitive programming.</li>
 
         <li>
-             I love animals. <a href="https://www.youtube.com/watch?v=LQRAfJyEsko&t=0s"><Yellow>This</Yellow></a> is the opposite of loving animals => I'm vegan🌱.
+             I love animals. <a href="https://www.youtube.com/watch?v=LQRAfJyEsko&t=0s"><Yellow>This</Yellow></a> is the opposite of loving animals🌱.
         </li>
         <li>I also love music! I've written some songs and want to learn to produce them.</li>
 
