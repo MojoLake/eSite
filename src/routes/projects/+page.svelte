@@ -1,14 +1,5 @@
-<style>
-  p {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+<script lang="ts">
+  import ProjectsComponent from '$lib/components/ProjectsComponent.svelte';
+</script>
 
-    margin: 0 auto;
-  }
-</style>
-
-<p>
-    This page is to be done. 
-    For now just check my <a href="https://github.com/MojoLake">Github.</a>
-</p>
+<ProjectsComponent />

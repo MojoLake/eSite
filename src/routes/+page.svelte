@@ -1,4 +1,8 @@
 <script lang="ts">
+    import BlogsComponent from '$lib/components/BlogsComponent.svelte';
+
+    export let data;
+    const { posts } = data;
 </script>
 
 <style>
@@ -34,11 +38,17 @@
 
 
 <div class="home">
-    <h1>hi! i'm&nbsp;<span style="color: var(--secondary-text-colour)">elias</span></h1>
+    <h1>hi! i'm
+        <a style="text-decoration: underline; color: var(--secondary-text-colour)" href="/elias">
+            elias
+        </a>
+    </h1>
 
     <p class="main-text">
       Welcome to the website!
       Have a deep breath and enjoy :)
     </p>
+
+    <BlogsComponent posts={posts} showCount=5 />
 </div>
 
