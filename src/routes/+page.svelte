@@ -1,5 +1,6 @@
 <script lang="ts">
     import BlogsComponent from '$lib/components/BlogsComponent.svelte';
+    import ProjectsComponent from '$lib/components/ProjectsComponent.svelte';
 
     export let data;
     const { posts } = data;
@@ -34,8 +35,11 @@
         margin: 5rem auto;
    }
 
-</style>
+   .blog-container {
+        margin: 4rem auto;
+   }
 
+</style>
 
 <div class="home">
     <h1>hi! i'm
@@ -49,6 +53,10 @@
       Have a deep breath and enjoy :)
     </p>
 
-    <BlogsComponent posts={posts} showCount=5 />
+    <div class="blog-container">
+        <h3> Here's a list of blogs I've written:</h3>
+
+        <BlogsComponent posts={posts} showCount=5 />
+    </div>
 </div>
 
