@@ -3,6 +3,7 @@ title: "The importance of light for our health"
 date: "2025-10-28"
 summary: "I discuss the importance of light for our health from a North-European point of view."
 tags: [ "svelte", "sleep" ]
+published: false
 ---
 
 I should also remember to write a blog about the importance of sleep and a consistent
