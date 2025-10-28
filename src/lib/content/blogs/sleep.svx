@@ -1,0 +1,28 @@
+---
+title: "Sleep is more important than anything"
+date: "2025-10-27"
+summary: "I try to convince you to really, really put effort into getting quality sleep."
+tags: ["intro", "svelte"]
+published: true
+---
+
+Sleep is important.
+We all know this. But you must internalize this.
+Having quality sleep can literally give you superpowers compared to a sleep deprived person (which btw is most of humanity nowdays...).
+
+It is actually crazy the effect a good nights sleep can have.
+Sometimes, for one reason or another, I feel sad in the evening, or even the whole day. It feels like nothing matters...
+But then I sleep a good 8 hours and life is smiling at me again :).
+
+Two months ago I started putting real effort into getting good sleep.
+There are many good things that came with it. One of my favourites is waking up and instantly feeling energetic and happy.
+
+Here are some more or less obvious tips for good sleep. More coming in a later blog about the importance of light.
+Most of these can also be found from a source such as [Sleep Foundation: Sleep Hygiene](https://www.sleepfoundation.org/sleep-hygiene).
+1. Sleep enough. Had to be said. Usually 6 hours is not enough. There are exceptions.
+2. Always (yes, always) wake up at the same time.
+  >-> Even if you for some reason got to sleep too late one night, still try to wake up at the same time.
+3. Don't have caffeine in your blood in the evening. In particular, don't drink coffee or energy drinks after 12pm.
+4. Make sure to get enough light into your eyes in the morning.
+5. Remember to break the rules above every once in a while :).
+

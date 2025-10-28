@@ -56,7 +56,10 @@
   }
 
   .blog-text {
-    font-size: 1.2rem;
+    font-size: 1.0rem;
+  }
+  .blog-text :global(a) {
+    color: var(--secondary-text-colour);
   }
 
   .blog-text :global(mark) {
