@@ -3,18 +3,16 @@
 </script>
 
 <div class="main">
-    <div class="post">
-        {#each showCount == -1 ? posts : posts.slice(0, showCount) as post}
-           <a href={`/blogs/${post.slug}`} class="post-link"> 
-                <div class="post">
-                  <h3 class="post-title">
-                      {post.title}
-                  </h3>
-                  &nbsp;{post.summary}
-                </div>
-          </a>
-        {/each}
-    </div>
+    {#each showCount == -1 ? posts : posts.slice(0, showCount) as post}
+       <a href={`/blogs/${post.slug}`} class="post-link"> 
+            <div class="post">
+              <h3 class="post-title">
+                  {post.title}
+              </h3>
+              &nbsp;{post.summary}
+            </div>
+      </a>
+    {/each}
 </div>
 
 <style>
@@ -22,7 +20,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
         padding: 0 0.5rem;
     }
 

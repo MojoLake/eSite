@@ -1,9 +1,0 @@
----
-title: "First blog"
-date: "2025-08-11"
-summary: "My first blog."
-tags: [ "svelte"]
----
-
-This my *first* blog!
-I hope you like it.
