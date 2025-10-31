@@ -29,12 +29,6 @@
       margin: auto 0.1rem;
    }
 
-   .bottom-text {
-        text-align: center;
-        font-size: 1.0rem;
-        margin: 5rem auto;
-   }
-
    .blog-container {
         margin: 4rem auto;
    }
