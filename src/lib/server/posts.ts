@@ -19,7 +19,7 @@ const loadAllPostsOnce = (): PostMeta[] => {
 
   const posts = Object.entries(modules).map(([path, mod]: any) => {
     const slug = path.split('/').pop()?.replace('.svx', '');
-    const { title, date, summary, tags, published = true } = mod.metadata || {};
+    const { title, date, summary, tags, published = false } = mod.metadata || {}; // assume not published if not marked
     return { slug, title, date, summary, tags, published} satisfies PostMeta;
   })
   .filter(p => p.title && p.date && p.published !== false)

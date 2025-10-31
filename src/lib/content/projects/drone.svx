@@ -1,0 +1,9 @@
+---
+title: "Building a drone"
+date: "2025-10-31"
+summary: "Me and my friends built a drone"
+tags: ["intro", "svelte"]
+published: false
+---
+
+Me and my friends built a drone. A giant ass drone.

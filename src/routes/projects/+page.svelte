@@ -1,5 +1,8 @@
 <script lang="ts">
-  import ProjectsComponent from '$lib/components/ProjectsComponent.svelte';
+  import ProjectsComponentWithTitle from '$lib/components/ProjectsComponentWithTitle.svelte';
+
+  export let data;
+  const { projects } = data;
 </script>
 
-<ProjectsComponent />
+<ProjectsComponentWithTitle {projects} />
