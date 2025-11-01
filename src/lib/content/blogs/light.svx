@@ -3,16 +3,13 @@ title: "The importance of light for our health"
 date: "2025-10-28"
 summary: "I discuss the importance of light for our health from a North-European point of view."
 tags: [ "svelte", "sleep" ]
-published: false
+published: true
 ---
-
-I should also remember to write a blog about the importance of sleep and a consistent
-sleep schedule.
 
 Necessary prerequisite:
 for the majority of our evolution we lived close to the equator where over
 the year the sun rises and sets at around the same time. Our brains got used
-to this "circadian rhythm": when it's bright they realise it's morning/daytime.
+to this "circadian rhythm". When it's bright our brains realise it's morning/daytime.
 When it's starting to get dark and the sun paints the horizon red, our brains
 realise nighttime is coming and melatonin and other sleep chemicals start to get
 produced.
@@ -23,28 +20,44 @@ being a strong signal of whether we should sleep or not.
 But humankind has progressed. We have artificial lights with which we can trick our
 brains into thinking it's daytime even if it's 1am.
 
-This creates two types of problems:
-1. non-natural (weak argument kinda). We should aim to adhere to the conditions
-which our brains have adapted to as well as we can to improve our health.
-
-2. Humankind has never been more sleep deprived.
-We have phones that we watch until late at night. This decreases the time we sleep
+This causes a problem:
+#### 1. Sleep deprivation
+- Fact: Humankind has never been more sleep deprived.
+We have screens and other articial light that we watch until late at night. This decreases the time we sleep
 and also the quality of our sleep. We wake up tired in the morning, not feeling too good.
 
-3. Additional point for us Northeners: during the winter months natural light
-is rare. In the morning it's pitch black. This increases the importance of
-my following rules.
+#### (2). Additional point for us Northeners: Lack of natural light
+- During the winter months natural light is rare. In the morning it's pitch black. Even Northeners brains have mainly evolved close to the equator, where a phenomenon such as "little to no sunlight for 3 months" is unseen (some adaptions apparently have happened [1])  To many individuals this causes a
+phenomenon called seasonal depression. This increases the importance of
+the rules I will present soon.
+
 
 If you are not convinved about the importance of sleep, then I can't help you :p.
 Anyway, I hope by now you are convinced that one effective way to improve one's
-amount and quality of sleep and thus quality of life is light control.
+amount and quality of sleep, and thus quality of life, is light control.
 
 Here are the "rules" that I follow:
 1. No phone or laptop after 21:00. All lights off. Only allowed to use
 my headlamp with red light (simulates sunset).
 2. Automatic light alarm that simulates sunrise.
-3. ALWAYS WAKE UP THE SAME TIME!
+3. Bright light exposure in the morning. Optimally from the sun but during winter months
+a good solution is a bright light therapy lamp.
+
+(Rule 1 I break quite often but still whenever possible try to follow.)
+
+Further comments about the three rules:
+1. The way I achieve this is by having interesting and fun stuff to do that don't
+require a phone or a laptop. For me they are reading an interesting book
+(often on my kindle with no backlight), doing maths homework, writing my diary 
+or playing the guitar or piano.
+
+2. I'm using Philips Hue (no affiliation). They work great out of the box.
+I wanted to code my own contoller that would run on a Raspberry Pi but chose
+convenience over tinkering this time.
+
+3. On my breakfast table I have a bright light therapy lamp ready, so I just
+have to switch it on in the morning.
 
 
+[1] https://genomebiology.biomedcentral.com/articles/10.1186/s13059-014-0499-7
 
-Nowdays, I almost without exception feel good when waking up.
