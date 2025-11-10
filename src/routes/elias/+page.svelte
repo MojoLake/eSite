@@ -42,7 +42,7 @@
       <ul>
         <li>ML engineer at <a href="https://hamina.com" target="_blank" rel="noopener noreferrer"><Yellow>Hamina Wireless</Yellow></a>.</li>
         <li>Mathematics student at <a href="https://www.aalto.fi/en" target="_blank" rel="noopener noreferrer"><Yellow>Aalto University</Yellow></a>.</li>
-        <li>Background in competitive programming (IOI 2022 participant, NCPC 2024 winner).</li>
+        <li>Background in competitive programming (NCPC 2024 winner, NOI 2023 Gold Medalist, IOI 2022 Participant).</li>
         <li>Interested in founding my own startup one day.</li>
 
       </ul>
