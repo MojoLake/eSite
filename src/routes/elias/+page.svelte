@@ -38,20 +38,20 @@
 
     
     <div class="main-text">
-      Quick facts about me:
+      <h3>Professional facts about me:</h3>
       <ul>
-        <li>A caring older brother.</li>
-        <li>Finnish🇫🇮</li>
-        <li>Interested in founding my own startup one day.</li>
-        <li>Mathematics student at <a href="https://www.aalto.fi/en" target="_blank" rel="noopener noreferrer"><Yellow>Aalto University</Yellow></a>.</li>
         <li>ML engineer at <a href="https://hamina.com" target="_blank" rel="noopener noreferrer"><Yellow>Hamina Wireless</Yellow></a>.</li>
-        <li>Background in competitive programming.</li>
+        <li>Mathematics student at <a href="https://www.aalto.fi/en" target="_blank" rel="noopener noreferrer"><Yellow>Aalto University</Yellow></a>.</li>
+        <li>Background in competitive programming (IOI 2022 participant, NCPC 2024 winner).</li>
+        <li>Interested in founding my own startup one day.</li>
 
-        <li>
-             I love animals. <a href="https://www.youtube.com/watch?v=LQRAfJyEsko&t=0s" target="_blank" rel="noopener noreferrer"><Yellow>This</Yellow></a> is the opposite of loving animals🌱.
-        </li>
-        <li>I also love music! I've written some songs and want to learn to produce them.</li>
+      </ul>
 
+      <h3>Less professional facts about me:</h3>
+      <ul>
+        <li>The oldest of tree brothers</li>
+        <li>Finnish🇫🇮</li>
+        <li>I love music! I've written some songs and want to learn to produce them.</li>
       </ul>
     </div>
 
