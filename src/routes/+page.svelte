@@ -31,7 +31,18 @@
   </p>
 
   {#if showBlogs}
-    <div class="blog-container" transition:fade={{ duration: 1000 }}>
+    <div class="blog-container" in:fade={{ duration: 1000 }}>
+      <h3>Here's a list of blogs I've written:</h3>
+
+      <ListComponent
+        items={posts}
+        basePath="blogs"
+        itemType="post"
+        showCount={5}
+      />
+    </div>
+  {:else}
+    <div class="blog-container" style="opacity: 0;">
       <h3>Here's a list of blogs I've written:</h3>
 
       <ListComponent
