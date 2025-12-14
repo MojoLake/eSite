@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onMount } from "svelte";
+  import { fade } from "svelte/transition";
   import ListComponent from "$lib/components/ListComponent.svelte";
 
   let { data } = $props();
@@ -29,16 +30,18 @@
     Welcome to the website! Have a deep breath and enjoy :)
   </p>
 
-  <div class="blog-container" class:visible={showBlogs}>
-    <h3>Here's a list of blogs I've written:</h3>
+  {#if showBlogs}
+    <div class="blog-container" transition:fade={{ duration: 1000 }}>
+      <h3>Here's a list of blogs I've written:</h3>
 
-    <ListComponent
-      items={posts}
-      basePath="blogs"
-      itemType="post"
-      showCount={5}
-    />
-  </div>
+      <ListComponent
+        items={posts}
+        basePath="blogs"
+        itemType="post"
+        showCount={5}
+      />
+    </div>
+  {/if}
 </div>
 
 <style>
@@ -66,11 +69,5 @@
 
   .blog-container {
     margin: 4rem auto;
-    opacity: 0;
-    transition: opacity 0.6s ease-in;
-  }
-
-  .blog-container.visible {
-    opacity: 1;
   }
 </style>
