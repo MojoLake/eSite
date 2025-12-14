@@ -13,7 +13,7 @@
   <ul>
     {#each items as item}
       <li>
-        <a href={item.href} on:click={onClick}>
+        <a href={item.href} onclick={onClick}>
           {item.text}
         </a>
       </li>
