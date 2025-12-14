@@ -1,7 +1,7 @@
 <script>
   import NavList from "$lib/components/NavList.svelte";
 
-  export let onClick;
+  let { onClick } = $props();
 </script>
 
 <div class="mobile-nav">

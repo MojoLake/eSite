@@ -1,11 +1,9 @@
 <script lang="ts">
-    import { base } from '$app/paths';
+  import { base } from "$app/paths";
 
-    export let name: string;
-    export let size = 24;
+  let { name, size = 24 }: { name: string; size?: number } = $props();
 </script>
 
-<svg fill="none" stroke="currentColor" width={size} height={size} >
-    <use href={`${base}/icons.svg#${name}`}></use>
+<svg fill="none" stroke="currentColor" width={size} height={size}>
+  <use href={`${base}/icons.svg#${name}`}></use>
 </svg>
-
