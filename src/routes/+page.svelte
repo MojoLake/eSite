@@ -24,7 +24,7 @@
   <div class="blog-container">
     <h3>Here's a list of blogs I've written:</h3>
 
-    <BlogsComponent {posts} showCount="5" />
+    <BlogsComponent {posts} showCount={5} />
   </div>
 </div>
 

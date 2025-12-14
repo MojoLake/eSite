@@ -5,5 +5,5 @@
   const { posts } = data;
 </script>
 
-<BlogsComponentWithTitle {posts} showCount="-1" />
+<BlogsComponentWithTitle {posts} showCount={-1} />
 <!-- -1 means all -->
