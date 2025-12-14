@@ -5,7 +5,6 @@
   let { children } = $props();
 
   import { fade } from "svelte/transition";
-  import { fly } from "svelte/transition";
 
   import Icon from "$lib/components/Icon.svelte";
   import DesktopNavList from "$lib/components/DesktopNavList.svelte";
@@ -32,7 +31,9 @@
   const desktop_hamburger_size = 50;
   const mobile_hamburger_size = 28;
 
-  let hamburger_size = $derived(desktop ? desktop_hamburger_size : mobile_hamburger_size);
+  let hamburger_size = $derived(
+    desktop ? desktop_hamburger_size : mobile_hamburger_size
+  );
 
   $effect(() => {
     const mql = window.matchMedia("(min-width: 777px)");
@@ -59,7 +60,11 @@
       {/if}
     </a>
 
-    <button class="menu-button" onclick={handleMenuClick}>
+    <button
+      class="menu-button"
+      onclick={handleMenuClick}
+      aria-expanded={navbar_open}
+    >
       {#if navbar_open}
         <Icon
           style="color: var(--secondary-text-colour)"
@@ -163,5 +168,4 @@
     inset: 0;
     background-color: var(--background-colour);
   }
-
 </style>
