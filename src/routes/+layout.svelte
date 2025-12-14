@@ -166,5 +166,6 @@
     position: absolute;
     inset: 0;
     background-color: var(--background-colour);
+    z-index: 10;
   }
 </style>
