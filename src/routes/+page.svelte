@@ -1,8 +1,17 @@
 <script lang="ts">
+  import { onMount } from "svelte";
   import ListComponent from "$lib/components/ListComponent.svelte";
 
   let { data } = $props();
   const { posts } = data;
+
+  let showBlogs = $state(false);
+
+  onMount(() => {
+    setTimeout(() => {
+      showBlogs = true;
+    }, 1000);
+  });
 </script>
 
 <div class="home">
@@ -20,7 +29,7 @@
     Welcome to the website! Have a deep breath and enjoy :)
   </p>
 
-  <div class="blog-container">
+  <div class="blog-container" class:visible={showBlogs}>
     <h3>Here's a list of blogs I've written:</h3>
 
     <ListComponent
@@ -57,5 +66,11 @@
 
   .blog-container {
     margin: 4rem auto;
+    opacity: 0;
+    transition: opacity 0.6s ease-in;
+  }
+
+  .blog-container.visible {
+    opacity: 1;
   }
 </style>
