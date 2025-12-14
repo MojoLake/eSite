@@ -63,16 +63,16 @@
       class="menu-button"
       onclick={handleMenuClick}
       aria-expanded={navbar_open}
+      aria-label={navbar_open ? "Close menu" : "Open menu"}
     >
       {#if navbar_open}
         <Icon
           style="color: var(--secondary-text-colour)"
           name="ex"
-          ariaLabel="Close menu"
           size={hamburger_size}
         />
       {:else}
-        <Icon name="hamburger" ariaLabel="Open menu" size={hamburger_size} />
+        <Icon name="hamburger" size={hamburger_size} />
       {/if}
     </button>
   </nav>
