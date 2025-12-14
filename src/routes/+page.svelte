@@ -1,34 +1,62 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import { fade } from "svelte/transition";
+  import type { TransitionConfig } from "svelte/transition";
+  import { cubicOut } from "svelte/easing";
   import ListComponent from "$lib/components/ListComponent.svelte";
 
   let { data } = $props();
   const { posts } = data;
 
+  let showHeader = $state(false);
   let showBlogs = $state(false);
 
+  // Custom transition that slides from center of viewport to final position
+  function slideFromCenter(node: Element): TransitionConfig {
+    const rect = node.getBoundingClientRect();
+    const viewportCenter = window.innerHeight / 2;
+    const elementCenter = rect.top + rect.height / 2;
+    const offset = viewportCenter - elementCenter;
+
+    return {
+      duration: 800,
+      easing: cubicOut,
+      css: (t: number) => {
+        const currentOffset = offset * (1 - t);
+        return `transform: translateY(${currentOffset}px);`;
+      },
+    };
+  }
+
   onMount(() => {
+    // Show header immediately to trigger the transition
+    showHeader = true;
+
+    // Show blogs after header animation completes
     setTimeout(() => {
       showBlogs = true;
-    }, 1000);
+    }, 800);
   });
 </script>
 
 <div class="home">
-  <h1>
-    hi! i'm
-    <a
-      style="text-decoration: underline; color: var(--secondary-text-colour)"
-      href="/elias"
-    >
-      elias
-    </a>
-  </h1>
+  {#if showHeader}
+    <div class="header-container" in:slideFromCenter>
+      <h1>
+        hi! i'm
+        <a
+          style="text-decoration: underline; color: var(--secondary-text-colour)"
+          href="/elias"
+        >
+          elias
+        </a>
+      </h1>
 
-  <p class="main-text">
-    Welcome to the website! Have a deep breath and enjoy :)
-  </p>
+      <p class="main-text">
+        Welcome to the website! Have a deep breath and enjoy :)
+      </p>
+    </div>
+  {/if}
 
   {#if showBlogs}
     <div class="blog-container" in:fade={{ duration: 1000 }}>
@@ -70,6 +98,10 @@
     align-items: center;
     max-width: 50rem;
     margin: 2rem auto;
+  }
+
+  .header-container {
+    width: 100%;
   }
 
   .main-text {
