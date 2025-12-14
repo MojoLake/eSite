@@ -1,5 +1,5 @@
-<script>
-  let { onClick } = $props();
+<script lang="ts">
+  let { onClick, variant = "desktop" } = $props();
 
   let items = [
     { text: "eHome", href: "/" },
@@ -9,7 +9,7 @@
   ];
 </script>
 
-<nav>
+<nav class={variant}>
   <ul>
     {#each items as item}
       <li>
@@ -24,25 +24,38 @@
 <style>
   nav {
     margin: auto;
-    margin-top: var(--nav-margin-top);
-    padding: var(--nav-padding);
-    height: var(--nav-height);
+    padding: 0;
+  }
+
+  nav.desktop {
+    margin-top: 2rem;
+  }
+
+  nav.mobile {
+    height: 70vh;
   }
 
   ul {
-    display: var(--nav-ul-display);
-    flex-direction: var(--nav-ul-flex-direction);
-    justify-content: var(--nav-ul-justify-content);
-    align-items: var(--nav-ul-align-items);
-    flex-wrap: var(--nav-flex-wrap);
-    padding: var(--nav-ul-padding);
-    margin: var(--nav-ul-margin);
-    height: var(--nav-ul-height);
-    gap: var(--nav-ul-gap);
+    display: flex;
+    padding: 0;
+    margin: 0;
+  }
+
+  nav.desktop ul {
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+  }
+
+  nav.mobile ul {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
   }
 
   li {
-    font-size: var(--nav-li-font-size);
+    font-size: 3rem;
     list-style-type: none;
   }
 

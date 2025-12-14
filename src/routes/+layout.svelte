@@ -7,8 +7,7 @@
   import { fade } from "svelte/transition";
 
   import Icon from "$lib/components/Icon.svelte";
-  import DesktopNavList from "$lib/components/DesktopNavList.svelte";
-  import MobileNavList from "$lib/components/MobileNavList.svelte";
+  import NavList from "$lib/components/NavList.svelte";
   import Contact from "$lib/components/Contact.svelte";
   import Footnote from "$lib/components/Footnote.svelte";
   import Yellow from "$lib/components/Yellow.svelte";
@@ -82,7 +81,7 @@
   <div class="content-shell">
     {#if navbar_open}
       <div class="nav-overlay" transition:fade={{ duration: 100 }}>
-        <MobileNavList onClick={handleNameClick} />
+        <NavList variant="mobile" onClick={handleNameClick} />
       </div>
     {/if}
 

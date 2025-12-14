@@ -1,6 +1,5 @@
 <script lang="ts">
-  import BlogsComponent from "$lib/components/BlogsComponent.svelte";
-  import ProjectsComponent from "$lib/components/ProjectsComponent.svelte";
+  import ListComponent from "$lib/components/ListComponent.svelte";
 
   let { data } = $props();
   const { posts } = data;
@@ -24,7 +23,12 @@
   <div class="blog-container">
     <h3>Here's a list of blogs I've written:</h3>
 
-    <BlogsComponent {posts} showCount={5} />
+    <ListComponent
+      items={posts}
+      basePath="blogs"
+      itemType="post"
+      showCount={5}
+    />
   </div>
 </div>
 

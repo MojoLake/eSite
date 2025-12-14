@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import NavList from "$lib/components/NavList.svelte";
 
   let { onClick } = $props();
