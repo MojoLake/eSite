@@ -19,6 +19,7 @@
     const offset = viewportCenter - elementCenter;
 
     return {
+      delay: 500,
       duration: 800,
       easing: cubicOut,
       css: (t: number) => {
@@ -35,7 +36,7 @@
     // Show blogs after header animation completes
     setTimeout(() => {
       showBlogs = true;
-    }, 800);
+    }, 1300);
   });
 </script>
 
