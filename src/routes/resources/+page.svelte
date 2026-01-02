@@ -11,7 +11,7 @@
   <section class="category">
     <h2>
       <span class="category-icon">📝</span>
-      Blogs I Enjoy
+      Blogs
     </h2>
 
     <div class="items">
@@ -28,7 +28,7 @@
         <h3>near.blog</h3>
         <p>
           Good advice for life and other stuff. Particularly enjoyed
-          <Yellow>Unusual Holidays</Yellow> — a delightful read.
+          <Yellow>Unusual Holidays</Yellow>.
         </p>
         <span class="external-link">↗</span>
       </a>
