@@ -4,6 +4,7 @@
   import type { TransitionConfig } from "svelte/transition";
   import { cubicOut } from "svelte/easing";
   import ListComponent from "$lib/components/ListComponent.svelte";
+  import Yellow from "$lib/components/Yellow.svelte";
 
   let { data } = $props();
   const { posts } = data;
@@ -44,17 +45,52 @@
   {#if showHeader}
     <div class="header-container" in:slideFromCenter>
       <h1>
-        hi! i'm
-        <a
-          style="text-decoration: underline; color: var(--secondary-text-colour)"
-          href="/elias"
-        >
-          elias
-        </a>
+        hi! i'm <span style="color: var(--secondary-text-colour)">elias</span>
       </h1>
 
-      <p class="main-text">
+      <p class="welcome-text">
         Welcome to the website! Have a deep breath and enjoy :)
+      </p>
+
+      <img src="/IMG_4668.jpeg" alt="Elias" class="profile-photo" />
+
+      <div class="about-text">
+        <h3>Professional facts about me:</h3>
+        <ul>
+          <li>
+            ML engineer at <a
+              href="https://hamina.com"
+              target="_blank"
+              rel="noopener noreferrer"><Yellow>Hamina Wireless</Yellow></a
+            >.
+          </li>
+          <li>
+            Mathematics student at <a
+              href="https://www.aalto.fi/en"
+              target="_blank"
+              rel="noopener noreferrer"><Yellow>Aalto University</Yellow></a
+            >.
+          </li>
+          <li>
+            Background in competitive programming (NCPC 2024 winner, NOI 2023
+            Gold Medalist, IOI 2022 Participant).
+          </li>
+          <li>Interested in founding my own startup one day.</li>
+        </ul>
+
+        <h3>Less professional facts about me:</h3>
+        <ul>
+          <li>The oldest of three brothers</li>
+          <li>Finnish🇫🇮</li>
+          <li>
+            I love music! I've written some songs and want to learn to produce
+            them.
+          </li>
+        </ul>
+      </div>
+
+      <p class="contact-text">
+        If you have any questions or want to chat, please contact me :)
       </p>
     </div>
   {/if}
@@ -105,10 +141,30 @@
     width: 100%;
   }
 
-  .main-text {
+  .welcome-text {
     font-size: 1.5rem;
     text-align: center;
     margin: auto 0.1rem;
+  }
+
+  .profile-photo {
+    display: block;
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+    margin: 2rem auto;
+    object-fit: cover;
+  }
+
+  .about-text {
+    font-size: 1rem;
+    margin: 2rem 1rem;
+  }
+
+  .contact-text {
+    text-align: center;
+    font-size: 1rem;
+    margin: 2rem auto;
   }
 
   .blog-container {

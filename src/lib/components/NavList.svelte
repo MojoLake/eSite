@@ -2,8 +2,7 @@
   let { onClick, variant = "desktop" } = $props();
 
   let items = [
-    { text: "eHome", href: "/" },
-    { text: "eLias", href: "/elias" },
+    { text: "eLias", href: "/" },
     { text: "eBlogs", href: "/blogs" },
     { text: "eResources", href: "/resources" },
   ];
