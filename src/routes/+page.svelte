@@ -52,41 +52,31 @@
         Welcome to the website! Have a deep breath and enjoy :)
       </p>
 
-      <img src="/IMG_4668.jpeg" alt="Elias" class="profile-photo" />
+      <div class="about-section">
+        <img src="/IMG_4668.jpeg" alt="Elias" class="profile-photo" />
 
-      <div class="about-text">
-        <h3>Professional facts about me:</h3>
-        <ul>
-          <li>
-            ML engineer at <a
+        <div class="about-text">
+          <p>
+            I'm an ML engineer at <a
               href="https://hamina.com"
               target="_blank"
               rel="noopener noreferrer"><Yellow>Hamina Wireless</Yellow></a
-            >.
-          </li>
-          <li>
-            Mathematics student at <a
+            >
+            and a mathematics student at
+            <a
               href="https://www.aalto.fi/en"
               target="_blank"
               rel="noopener noreferrer"><Yellow>Aalto University</Yellow></a
-            >.
-          </li>
-          <li>
-            Background in competitive programming (NCPC 2024 winner, NOI 2023
-            Gold Medalist, IOI 2022 Participant).
-          </li>
-          <li>Interested in founding my own startup one day.</li>
-        </ul>
-
-        <h3>Less professional facts about me:</h3>
-        <ul>
-          <li>The oldest of three brothers</li>
-          <li>Finnish🇫🇮</li>
-          <li>
-            I love music! I've written some songs and want to learn to produce
-            them.
-          </li>
-        </ul>
+            >. I have a background in competitive programming—NCPC 2024 winner,
+            NOI 2023 Gold Medalist, and IOI 2022 Participant. One day I'd love
+            to found my own startup.
+          </p>
+          <p>
+            Outside of work, I'm the oldest of three brothers and proudly
+            Finnish 🇫🇮. I love music—I've written some songs and want to learn
+            to produce them.
+          </p>
+        </div>
       </div>
 
       <p class="contact-text">
@@ -147,18 +137,43 @@
     margin: auto 0.1rem;
   }
 
+  .about-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    margin: 2rem 1rem;
+  }
+
   .profile-photo {
-    display: block;
+    flex-shrink: 0;
     width: 200px;
     height: 200px;
     border-radius: 8px;
-    margin: 2rem auto;
     object-fit: cover;
   }
 
   .about-text {
     font-size: 1rem;
-    margin: 2rem 1rem;
+  }
+
+  .about-text p {
+    margin: 0 0 1rem 0;
+    line-height: 1.6;
+  }
+
+  .about-text p:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 600px) {
+    .about-section {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .about-text {
+      text-align: center;
+    }
   }
 
   .contact-text {
