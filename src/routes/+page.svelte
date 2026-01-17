@@ -67,14 +67,13 @@
               href="https://www.aalto.fi/en"
               target="_blank"
               rel="noopener noreferrer"><Yellow>Aalto University</Yellow></a
-            >. I have a background in competitive programming (NCPC winner, IOI
-            team 🇫🇮). Interested in tech-startups.
+            > with a background in competitive programming (NCPC winner, IOI team
+            🇫🇮).
           </p>
           <p>
             I love building stuff. I have won multiple hackathons, built a
-            custom drone and multiple personal projects.
+            custom drone and multiple other personal projects.
           </p>
-          <p>If you have any questions or want to chat, please contact me :)</p>
         </div>
       </div>
     </div>
@@ -126,12 +125,6 @@
     width: 100%;
   }
 
-  .welcome-text {
-    font-size: 1.5rem;
-    text-align: center;
-    margin: auto 0.1rem;
-  }
-
   .about-section {
     display: flex;
     align-items: flex-start;
@@ -148,7 +141,7 @@
   }
 
   .about-text {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   .about-text p {
