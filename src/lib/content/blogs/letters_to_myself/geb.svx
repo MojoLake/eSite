@@ -1,0 +1,11 @@
+---
+title: "Letter to myself at half-way of Gödel-Escher-Bach"
+date: "2025-10-27"
+summary: "Telling my future-self my current ideas related to GEB"
+tags: ["books"]
+published: false
+---
+
+GEB talks about intelligence. The ant colony analogy to human brain was brilliant. And in general the book just has so many layers.
+I don't really know what else to say right now. I guess I can continue this later.
+
