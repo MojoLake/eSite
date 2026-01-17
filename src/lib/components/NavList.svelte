@@ -4,6 +4,7 @@
   let items = [
     { text: "eLias", href: "/" },
     { text: "eBlogs", href: "/blogs" },
+    { text: "eProjects", href: "/projects" },
     { text: "eResources", href: "/resources" },
   ];
 </script>
