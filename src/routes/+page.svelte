@@ -45,19 +45,19 @@
   {#if showHeader}
     <div class="header-container" in:slideFromCenter>
       <h1>
-        hi! i'm <span style="color: var(--secondary-text-colour)">elias</span>
+        hi! i'm <span style="color: var(--secondary-text-colour)">elias</span>,
       </h1>
 
-      <p class="welcome-text">
+      <!-- <p class="welcome-text">
         Welcome to the website! Have a deep breath and enjoy :)
-      </p>
+      </p> -->
 
       <div class="about-section">
         <img src="/IMG_4668.jpeg" alt="Elias" class="profile-photo" />
 
         <div class="about-text">
           <p>
-            I'm an ML engineer at <a
+            an ML engineer at <a
               href="https://hamina.com"
               target="_blank"
               rel="noopener noreferrer"><Yellow>Hamina Wireless</Yellow></a
@@ -67,21 +67,16 @@
               href="https://www.aalto.fi/en"
               target="_blank"
               rel="noopener noreferrer"><Yellow>Aalto University</Yellow></a
-            >. I have a background in competitive programming—NCPC 2024 winner,
-            NOI 2023 Gold Medalist, and IOI 2022 Participant. One day I'd love
-            to found my own startup.
+            >. I have a background in competitive programming (NCPC winner, IOI
+            team 🇫🇮). Interested in tech-startups.
           </p>
           <p>
-            Outside of work, I'm the oldest of three brothers and proudly
-            Finnish 🇫🇮. I love music—I've written some songs and want to learn
-            to produce them.
+            I love building stuff. I have won multiple hackathons, built a
+            custom drone and multiple personal projects.
           </p>
+          <p>If you have any questions or want to chat, please contact me :)</p>
         </div>
       </div>
-
-      <p class="contact-text">
-        If you have any questions or want to chat, please contact me :)
-      </p>
     </div>
   {/if}
 
