@@ -8,4 +8,4 @@
     }
 </style>
 
-<p class="footnote">Elias Simojoki 01/11/2025</p>
+<p class="footnote">Elias Simojoki</p>
