@@ -33,6 +33,11 @@
         </a>
     </li>
     <li>
+        <a href="https://x.com/elias_simojoki">
+            <img src="/x.svg" alt="X logo"/>
+        </a>
+    </li>
+    <li>
         <a Email href="mailto:simo.simojoki@gmail.com">
             <img src="/semail.svg" alt="email logo"/>
         </a>
