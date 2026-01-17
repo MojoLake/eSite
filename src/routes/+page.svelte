@@ -1,8 +1,6 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import { fade } from "svelte/transition";
-  import type { TransitionConfig } from "svelte/transition";
-  import { cubicOut } from "svelte/easing";
   import ListComponent from "$lib/components/ListComponent.svelte";
   import Yellow from "$lib/components/Yellow.svelte";
 
@@ -11,24 +9,6 @@
 
   let showHeader = $state(false);
   let showBlogs = $state(false);
-
-  // Custom transition that slides from center of viewport to final position
-  function slideFromCenter(node: Element): TransitionConfig {
-    const rect = node.getBoundingClientRect();
-    const viewportCenter = window.innerHeight / 2;
-    const elementCenter = rect.top + rect.height / 2;
-    const offset = viewportCenter - elementCenter;
-
-    return {
-      delay: 500,
-      duration: 800,
-      easing: cubicOut,
-      css: (t: number) => {
-        const currentOffset = offset * (1 - t);
-        return `transform: translateY(${currentOffset}px);`;
-      },
-    };
-  }
 
   onMount(() => {
     // Show header immediately to trigger the transition
@@ -43,7 +23,7 @@
 
 <div class="home">
   {#if showHeader}
-    <div class="header-container" in:slideFromCenter>
+    <div class="header-container">
       <h1>
         hi! i'm <span style="color: var(--secondary-text-colour)">elias</span>,
       </h1>
@@ -71,8 +51,8 @@
             🇫🇮).
           </p>
           <p>
-            I love building stuff. I have won multiple hackathons, built a
-            custom drone and multiple other personal projects.
+            I have won multiple hackathons, built a custom drone and been a
+            cyber security researcher at the Finnish Defence Research Agency.
           </p>
         </div>
       </div>
