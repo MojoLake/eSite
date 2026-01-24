@@ -1,7 +1,7 @@
 <script lang="ts">
   let { items, basePath, itemType = "item", showCount = -1 } = $props();
   let displayItems = $derived(
-    showCount === -1 ? items : items.slice(0, showCount)
+    showCount === -1 ? items : items.slice(0, showCount),
   );
 </script>
 
@@ -12,7 +12,7 @@
         <h3 class="{itemType}-title">
           {item.title}
         </h3>
-        &nbsp;{item.summary}
+        {item.summary}
       </div>
     </a>
   {/each}
