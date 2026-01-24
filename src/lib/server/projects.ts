@@ -5,6 +5,7 @@ type ProjectMeta = {
   summary?: string;
   liveUrl?: string;
   githubUrl?: string;
+  relevancy?: number;
   published?: boolean;
 };
 
@@ -20,11 +21,19 @@ const loadAllProjectsOnce = (): ProjectMeta[] => {
 
   const projects = Object.entries(modules).map(([path, mod]: any) => {
     const slug = path.split('/').pop()?.replace('.svx', '');
-    const { title, date, summary, liveUrl, githubUrl, published = false } = mod.metadata || {};
-    return { slug, title, date, summary, liveUrl, githubUrl, published } satisfies ProjectMeta;
+    const { title, date, summary, liveUrl, githubUrl, relevancy, published = false } = mod.metadata || {};
+    return { slug, title, date, summary, liveUrl, githubUrl, relevancy, published } satisfies ProjectMeta;
   })
   .filter(p => p.title && p.date && p.published !== false)
-  .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  .sort((a, b) => {
+    // Primary: sort by relevancy (higher first), treat undefined as lowest priority
+    const relA = a.relevancy ?? -Infinity;
+    const relB = b.relevancy ?? -Infinity;
+    if (relA !== relB) return relB - relA;
+
+    // Secondary: sort by date (newest first)
+    return new Date(b.date).getTime() - new Date(a.date).getTime();
+  });
 
   return projects;
 }
