@@ -5,18 +5,18 @@
   import Yellow from "$lib/components/Yellow.svelte";
 
   let { data } = $props();
-  const { posts } = data;
+  const { posts, projects } = data;
 
   let showHeader = $state(false);
-  let showBlogs = $state(false);
+  let showContent = $state(false);
 
   onMount(() => {
     // Show header immediately to trigger the transition
     showHeader = true;
 
-    // Show blogs after header animation completes
+    // Show content after header animation completes
     setTimeout(() => {
-      showBlogs = true;
+      showContent = true;
     }, 1300);
   });
 </script>
@@ -59,27 +59,47 @@
     </div>
   {/if}
 
-  {#if showBlogs}
-    <div class="blog-container" in:fade={{ duration: 1000 }}>
-      <h3>Here's a list of blogs I've written:</h3>
-
-      <ListComponent
-        items={posts}
-        basePath="blogs"
-        itemType="post"
-        showCount={5}
-      />
+  {#if showContent}
+    <div class="content-container" in:fade={{ duration: 1000 }}>
+      <div class="column">
+        <h3>Blogs</h3>
+        <ListComponent
+          items={posts}
+          basePath="blogs"
+          itemType="post"
+          showCount={5}
+        />
+      </div>
+      <div class="column">
+        <h3>Projects</h3>
+        <ListComponent
+          items={projects}
+          basePath="projects"
+          itemType="project"
+          showCount={5}
+        />
+      </div>
     </div>
   {:else}
-    <div class="blog-container" style="opacity: 0;">
-      <h3>Here's a list of blogs I've written:</h3>
-
-      <ListComponent
-        items={posts}
-        basePath="blogs"
-        itemType="post"
-        showCount={5}
-      />
+    <div class="content-container" style="opacity: 0;">
+      <div class="column">
+        <h3>Blogs</h3>
+        <ListComponent
+          items={posts}
+          basePath="blogs"
+          itemType="post"
+          showCount={5}
+        />
+      </div>
+      <div class="column">
+        <h3>Projects</h3>
+        <ListComponent
+          items={projects}
+          basePath="projects"
+          itemType="project"
+          showCount={5}
+        />
+      </div>
     </div>
   {/if}
 </div>
@@ -150,7 +170,26 @@
     margin: 2rem auto;
   }
 
-  .blog-container {
+  .content-container {
+    display: flex;
+    gap: 3rem;
     margin: 4rem auto;
+    width: 100%;
+  }
+
+  .column {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .column h3 {
+    margin-bottom: 1rem;
+  }
+
+  @media (max-width: 600px) {
+    .content-container {
+      flex-direction: column;
+      gap: 2rem;
+    }
   }
 </style>
