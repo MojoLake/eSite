@@ -1,6 +1,6 @@
 ---
 title: "Ressu Coding Club"
-date: "2023-01-01"
+date: "2022-02-01"
 summary: "Founded a coding club at my high school with a website, locker reservation system, and several games."
 githubUrl: "https://github.com/ressu-coding-club"
 published: true

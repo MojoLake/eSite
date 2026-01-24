@@ -1,6 +1,6 @@
 ---
 title: "3D Tic-Tac-Toe"
-date: "2024-12-01"
+date: "2026-01-01"
 summary: "A 4×4×4 three-dimensional tic-tac-toe game with gravity mechanics."
 liveUrl: "https://3dtictactoe.xyz/"
 githubUrl: "https://github.com/MojoLake/3D-TicTacToe-Gravity"

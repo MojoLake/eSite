@@ -1,6 +1,6 @@
 ---
 title: "λPump (Junction 2025 3rd place)"
-date: "2025-01-15"
+date: "2025-11-09"
 summary: "An optimization system for scheduling wastewater pumps that secured our team the third place in Junction 2025."
 githubUrl: "https://github.com/MojoLake/lambdapump"
 published: true
