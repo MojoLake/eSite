@@ -37,11 +37,7 @@
       <div class="project-header">
         <h3>3D Tic-Tac-Toe</h3>
       </div>
-      <p>
-        A 4×4×4 three-dimensional tic-tac-toe game with <Yellow
-          >gravity mechanics</Yellow
-        >.
-      </p>
+      <p>A 4×4×4 three-dimensional tic-tac-toe game with gravity mechanics .</p>
       <div class="project-links">
         <a
           href="https://3dtictactoe.xyz/"
