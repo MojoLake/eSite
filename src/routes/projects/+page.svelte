@@ -57,6 +57,27 @@
         </a>
       </div>
     </div>
+
+    <div class="project-card">
+      <div class="project-header">
+        <h3>Ressu Coding Club</h3>
+      </div>
+      <p>
+        Founded a coding club at my high school. We developed a website, a
+        school locker reservation system, and several games including a typing
+        game and a remixed version of 2048.
+      </p>
+      <div class="project-links">
+        <a
+          href="https://github.com/ressu-coding-club"
+          target="_blank"
+          class="link-badge github"
+        >
+          <span class="link-icon">⌨</span> GitHub
+          <span class="external-link">↗</span>
+        </a>
+      </div>
+    </div>
   </div>
 </div>
 
