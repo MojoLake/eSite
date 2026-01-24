@@ -1,0 +1,9 @@
+---
+title: "λPump (Junction 2025 3rd place)"
+date: "2025-01-15"
+summary: "An optimization system for scheduling wastewater pumps that secured our team the third place in Junction 2025."
+githubUrl: "https://github.com/MojoLake/lambdapump"
+published: true
+---
+
+An optimization system for scheduling wastewater pumps that secured our team the third place in Junction 2025. It uses MILP for the optimization and an LLM for explaining the result.

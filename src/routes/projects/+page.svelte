@@ -1,5 +1,6 @@
 <script lang="ts">
-  import Yellow from "$lib/components/Yellow.svelte";
+  let { data } = $props();
+  const { projects } = data;
 </script>
 
 <div class="container">
@@ -7,98 +8,28 @@
   <p class="subtitle">Things I've built that you can try out.</p>
 
   <div class="projects">
-    <div class="project-card">
-      <div class="project-header">
-        <h3>1Reply</h3>
+    {#each projects as project}
+      <div class="project-card">
+        <div class="project-header">
+          <h3>{project.title}</h3>
+        </div>
+        <p>{project.summary}</p>
+        <div class="project-links">
+          {#if project.liveUrl}
+            <a href={project.liveUrl} target="_blank" class="link-badge live">
+              <span class="link-icon">🌐</span> Live
+              <span class="external-link">↗</span>
+            </a>
+          {/if}
+          {#if project.githubUrl}
+            <a href={project.githubUrl} target="_blank" class="link-badge github">
+              <span class="link-icon">⌨</span> GitHub
+              <span class="external-link">↗</span>
+            </a>
+          {/if}
+        </div>
       </div>
-      <p>
-        A word puzzle game where you participate in two simultaneous
-        conversations and must craft a single reply that works for <Yellow
-          >both</Yellow
-        > at the same time.
-      </p>
-      <div class="project-links">
-        <a href="https://1reply.xyz/" target="_blank" class="link-badge live">
-          <span class="link-icon">🌐</span> Live
-          <span class="external-link">↗</span>
-        </a>
-        <a
-          href="https://github.com/MojoLake/1reply"
-          target="_blank"
-          class="link-badge github"
-        >
-          <span class="link-icon">⌨</span> GitHub
-          <span class="external-link">↗</span>
-        </a>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <div class="project-header">
-        <h3>3D Tic-Tac-Toe</h3>
-      </div>
-      <p>A 4×4×4 three-dimensional tic-tac-toe game with gravity mechanics .</p>
-      <div class="project-links">
-        <a
-          href="https://3dtictactoe.xyz/"
-          target="_blank"
-          class="link-badge live"
-        >
-          <span class="link-icon">🌐</span> Live
-          <span class="external-link">↗</span>
-        </a>
-        <a
-          href="https://github.com/MojoLake/3D-TicTacToe-Gravity"
-          target="_blank"
-          class="link-badge github"
-        >
-          <span class="link-icon">⌨</span> GitHub
-          <span class="external-link">↗</span>
-        </a>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <div class="project-header">
-        <h3>λPump (Junction 2025 3rd place)</h3>
-      </div>
-      <p>
-        An optimization system for scheduling wastewater pumps that secured our
-        team the third place in Junction 2025. It uses MILP for the optimization
-        and an LLM for explaining the result.
-      </p>
-      <div class="project-links">
-        <a
-          href="https://github.com/MojoLake/lambdapump"
-          target="_blank"
-          class="link-badge github"
-        >
-          <span class="link-icon">⌨</span> GitHub
-          <span class="external-link">↗</span>
-        </a>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <div class="project-header">
-        <h3>Ressu Coding Club</h3>
-      </div>
-      <p>
-        Founded a coding club at my high school. We developed a website, a
-        school locker reservation system, and several games including a typing
-        game and a remixed version of 2048.
-      </p>
-      <div class="project-links">
-        <a
-          href="https://github.com/ressu-coding-club"
-          target="_blank"
-          class="link-badge github"
-        >
-          <span class="link-icon">⌨</span> GitHub
-          <span class="external-link">↗</span>
-        </a>
-      </div>
-    </div>
+    {/each}
   </div>
 </div>
 

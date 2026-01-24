@@ -1,0 +1,9 @@
+---
+title: "Ressu Coding Club"
+date: "2023-01-01"
+summary: "Founded a coding club at my high school with a website, locker reservation system, and several games."
+githubUrl: "https://github.com/ressu-coding-club"
+published: true
+---
+
+Founded a coding club at my high school. We developed a website, a school locker reservation system, and several games including a typing game and a remixed version of 2048.

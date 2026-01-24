@@ -3,6 +3,8 @@ type ProjectMeta = {
   title: string;
   date: string;
   summary?: string;
+  liveUrl?: string;
+  githubUrl?: string;
   published?: boolean;
 };
 
@@ -11,15 +13,15 @@ export type Project = {
   content: any;
 };
 
-let _allProjects: ProjectMeta | null = null;
+let _allProjects: ProjectMeta[] | null = null;
 
 const loadAllProjectsOnce = (): ProjectMeta[] => {
   const modules = import.meta.glob('/src/lib/content/projects/*.svx', { eager: true });
 
   const projects = Object.entries(modules).map(([path, mod]: any) => {
     const slug = path.split('/').pop()?.replace('.svx', '');
-    const { title, date, summary, published = false } = mod.metadata || {}; // assume not published if not marked
-    return { slug, title, date, summary, published } satisfies ProjectMeta;
+    const { title, date, summary, liveUrl, githubUrl, published = false } = mod.metadata || {};
+    return { slug, title, date, summary, liveUrl, githubUrl, published } satisfies ProjectMeta;
   })
   .filter(p => p.title && p.date && p.published !== false)
   .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());

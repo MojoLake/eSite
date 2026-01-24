@@ -1,0 +1,10 @@
+---
+title: "1Reply"
+date: "2025-01-01"
+summary: "A word puzzle game where you participate in two simultaneous conversations and must craft a single reply that works for both at the same time."
+liveUrl: "https://1reply.xyz/"
+githubUrl: "https://github.com/MojoLake/1reply"
+published: true
+---
+
+A word puzzle game where you participate in two simultaneous conversations and must craft a single reply that works for both at the same time.
