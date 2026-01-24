@@ -60,6 +60,27 @@
 
     <div class="project-card">
       <div class="project-header">
+        <h3>λPump (Junction 2025 3rd place)</h3>
+      </div>
+      <p>
+        An optimization system for scheduling wastewater pumps that secured our
+        team the third place in Junction 2025. It uses MILP for the optimization
+        and an LLM for explaining the result.
+      </p>
+      <div class="project-links">
+        <a
+          href="https://github.com/MojoLake/lambdapump"
+          target="_blank"
+          class="link-badge github"
+        >
+          <span class="link-icon">⌨</span> GitHub
+          <span class="external-link">↗</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-header">
         <h3>Ressu Coding Club</h3>
       </div>
       <p>
