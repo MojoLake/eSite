@@ -164,12 +164,6 @@
     }
   }
 
-  .contact-text {
-    text-align: center;
-    font-size: 1rem;
-    margin: 2rem auto;
-  }
-
   .content-container {
     display: flex;
     gap: 3rem;
