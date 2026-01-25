@@ -37,7 +37,7 @@
 
         <div class="about-text">
           <p>
-            an ML engineer at <a
+            a machine learning engineer at <a
               href="https://hamina.com"
               target="_blank"
               rel="noopener noreferrer"><Yellow>Hamina Wireless</Yellow></a
@@ -53,6 +53,15 @@
           <p>
             I have won multiple hackathons, built a custom drone and been a
             cyber security researcher at the Finnish Defence Research Agency.
+          </p>
+
+          <p>
+            Recently, I've started emitting my consciousness as posts on my 
+            <a
+                href="https://x.com/elias_simojoki"
+                target="_blank"
+                rel="noopener noreferrer"
+            >𝕏-account</a>.
           </p>
         </div>
       </div>
