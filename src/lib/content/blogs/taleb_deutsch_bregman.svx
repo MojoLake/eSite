@@ -1,0 +1,58 @@
+---
+title: "Taleb, Deutsch, Bregman, an eternal common thread"
+date: "2026-01-25"
+summary: "Discussing the connection between the works of Taleb, Deutsch and Bregman"
+tags: ["TDB"]
+published: false
+---
+
+In his book Antifragile, Taleb discusses modern education in a critical light.
+Prefer apprenticeship or action learning over credentialism. Instead of putting emphasis on classes and credentials, education
+should focus on exploration and inquiry and building good citizens instead of knowledge machines.
+
+"Don't ask the fish how to fish, ask the fisherman" goes the old saying. The same applies for education.
+The corresponding saying for edcuation would be: "Don't teach the student what the truth is, teach them how to arrive at the truth".
+(it should be noted that the word "truth" here is used rather freely and in particular does not mean any absolute truth)
+
+A person with the ability to think, ruminate and explore the world is a hundred times more valuable than the person
+with a large (but finite) tank of knowledge with no ability of inquiry.
+
+Why? Because the former person's potential knowledge is, in fact, infinite.
+(this is already slipping to the Deutsch' side, just goes to show how some of their ideas are quite similar)
+
+### What about Bregman?
+
+Bregman, in his book "Humandkind: a Hopeful History" talks in the latter chapters about education a lot.
+A case study discussed in the book is the school model of [Agora](https://hundred.org/en/innovations/agora) in Netherlands.
+It is a very free form school where, instead of strict hierarchy and rigid classes, each child gets to learn through their own path.
+The school encourages self-inquiry and agency. The children, with the help of a "coach", plan their own curriculum.
+
+Some curious facts about Agora are that:
+- the children are _not_ divided according to any irrelevant metric such as age
+- instead of classrooms, the learning spaces resemble workshops
+- there is essentially no bullying
+- more?
+
+An interesting statistic is that the amount of bullying in a school correlates with how strict and hierarchical the school is,
+with traditional boarding schools being the worst. (source??)
+
+So, there is something magical about Agora and the freedom it gives to the children.
+
+I think this comes down to, instead of underestimating children, Agora has full trust in the students and their
+ability to command their own life. Instead of forcing knowledge down students' throats, they allow the students' themselves
+choose which knowledge raises their appetite. 
+
+The skeptics of course say that this kind of system can never work. Children are little rascals that require discipline to do things.
+But they make one mistake. They severely underestimate children. Sure, if children are put into an environment where their
+freedom is constrained and they are punished for having "ADHD" (read: being a normal lively child who is made to move, explore and wander) then sure,
+they become bad-behaving rascals. But instead if they are given the freedom they need and their nature is let flourish, they will become the best versions of themselves.
+
+
+Agora works. It exists, and works. It works better than most other schools.
+
+### What is my point?
+
+I see, as I'm sure the reader is starting to see as well, a common thread between the ideas and writings of T, D and B regarding education.
+This common thread can be summarised as "exploration over exposition".
+
+Let the child learn about the wonders of the world. This will make them more capable human beings.
