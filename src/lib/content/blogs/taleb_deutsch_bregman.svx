@@ -1,17 +1,22 @@
 ---
-title: "Taleb, Deutsch, Bregman, an eternal common thread"
+title: "Taleb, Deutsch, Bregman, an eternal common thread - Part 1"
 date: "2026-01-25"
-summary: "Discussing the connection between the works of Taleb, Deutsch and Bregman"
+summary: "Discussing the connection between the works of Taleb, Deutsch and Bregman in how they regard education."
 tags: ["TDB"]
 published: false
 ---
 
-In his book Antifragile, Taleb discusses modern education in a critical light.
+### Taleb
+
+In his book "Antifragile" Taleb discusses modern education in a critical light.
 Prefer apprenticeship or action learning over credentialism. Instead of putting emphasis on classes and credentials, education
 should focus on exploration and inquiry and building good citizens instead of knowledge machines.
 
-"Don't ask the fish how to fish, ask the fisherman" goes the old saying. The same applies for education.
-The corresponding saying for edcuation would be: "Don't teach the student what the truth is, teach them how to arrive at the truth".
+### Don't teach the student what the truth is
+
+"Give a man a fish and you feed him for a day; teach a man to fish and you feed him for a lifetime" goes the old saying. The same should apply for education.
+
+The corresponding saying for education would be: "Don't teach the student what the truth is, teach them how to arrive at it".
 (it should be noted that the word "truth" here is used rather freely and in particular does not mean any absolute truth)
 
 A person with the ability to think, ruminate and explore the world is a hundred times more valuable than the person
@@ -22,7 +27,7 @@ Why? Because the former person's potential knowledge is, in fact, infinite.
 
 ### What about Bregman?
 
-Bregman, in his book "Humandkind: a Hopeful History" talks in the latter chapters about education a lot.
+Bregman, in his book's "Humandkind: a Hopeful History" latter chapters talks a lot about education.
 A case study discussed in the book is the school model of [Agora](https://hundred.org/en/innovations/agora) in Netherlands.
 It is a very free form school where, instead of strict hierarchy and rigid classes, each child gets to learn through their own path.
 The school encourages self-inquiry and agency. The children, with the help of a "coach", plan their own curriculum.
@@ -30,11 +35,9 @@ The school encourages self-inquiry and agency. The children, with the help of a 
 Some curious facts about Agora are that:
 - the children are _not_ divided according to any irrelevant metric such as age
 - instead of classrooms, the learning spaces resemble workshops
-- there is essentially no bullying
-- more?
+- there is essentially no bullying (according to Bregman's book)
 
-An interesting statistic is that the amount of bullying in a school correlates with how strict and hierarchical the school is,
-with traditional boarding schools being the worst. (source??)
+An interesting fact is that the amount of bullying in a school correlates with how strict and hierarchical the school is, with traditional boarding schools being the worst. (this fact I also got from Bregman's book)
 
 So, there is something magical about Agora and the freedom it gives to the children.
 
@@ -45,7 +48,7 @@ choose which knowledge raises their appetite.
 The skeptics of course say that this kind of system can never work. Children are little rascals that require discipline to do things.
 But they make one mistake. They severely underestimate children. Sure, if children are put into an environment where their
 freedom is constrained and they are punished for having "ADHD" (read: being a normal lively child who is made to move, explore and wander) then sure,
-they become bad-behaving rascals. But instead if they are given the freedom they need and their nature is let flourish, they will become the best versions of themselves.
+they become bad-behaving rascals. But if they are instead given the freedom they need and their nature is let flourish, they will become the best versions of themselves.
 
 
 Agora works. It exists, and works. It works better than most other schools.
@@ -56,3 +59,6 @@ I see, as I'm sure the reader is starting to see as well, a common thread betwee
 This common thread can be summarised as "exploration over exposition".
 
 Let the child learn about the wonders of the world. This will make them more capable human beings.
+
+
+This is a very interesting topic that I have a lot of thoughts on. For this reason, I named this the part 1. Now I'm forced to write a part 2.
