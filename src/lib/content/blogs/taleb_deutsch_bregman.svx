@@ -8,7 +8,19 @@ published: false
 
 ### Taleb
 
-In his book "Antifragile" Taleb discusses modern education in a critical light.
+"How many intervals are there between 15 flagpoles?"
+
+Children who had not been taught arithmetic easily figured out the answer was 14.
+Instead children who had just been taught arithmetic often got confused and answered 15.
+
+This is an example used in Taleb's "Antifragile".
+
+School is good at making students good at school. Unfortunately being good at school (in its current form) does not make one good at life.
+
+It can be a decent proxy for subsequent success in life because agentic and able individuals learn to thrive in any environment.
+
+"Agenticity" or "ableness" are in most cases, however, not a product of education but traits despite of receiving a formal education.
+
 Prefer apprenticeship or action learning over credentialism. Instead of putting emphasis on classes and credentials, education
 should focus on exploration and inquiry and building good citizens instead of knowledge machines.
 
