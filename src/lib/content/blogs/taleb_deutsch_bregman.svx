@@ -1,7 +1,7 @@
 ---
 title: "Taleb, Deutsch, Bregman, an eternal common thread - Part 1"
-date: "2026-01-25"
-summary: "Discussing the connection between the works of Taleb, Deutsch and Bregman in how they regard education."
+date: "2026-02-13"
+summary: "What is good education? Discussing the connection between the works of Taleb, Deutsch and Bregman."
 tags: ["TDB"]
 published: true
 ---
