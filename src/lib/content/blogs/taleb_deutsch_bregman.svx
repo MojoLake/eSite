@@ -3,7 +3,7 @@ title: "Taleb, Deutsch, Bregman, an eternal common thread - Part 1"
 date: "2026-01-25"
 summary: "Discussing the connection between the works of Taleb, Deutsch and Bregman in how they regard education."
 tags: ["TDB"]
-published: false
+published: true
 ---
 
 ### Taleb
@@ -35,7 +35,8 @@ A person with the ability to think, ruminate and explore the world is a hundred 
 with a large (but finite) tank of knowledge with no ability of inquiry.
 
 Why? Because the former person's potential knowledge is, in fact, infinite.
-(this is already slipping to the Deutsch' side, just goes to show how some of their ideas are quite similar)
+
+aand like this, quite seamlessly, we have transitioned from Taleb to Deutsch!
 
 ### What about Bregman?
 
