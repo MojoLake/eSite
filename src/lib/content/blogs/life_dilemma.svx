@@ -1,0 +1,37 @@
+---
+title: "What to do in life"
+date: "2026-02-12"
+summary: "Short thoughts about what I should do with my life"
+tags: ["life"]
+published: true
+---
+
+### Today I was talking with Opus 4.6 about what I should do with life.
+
+I realised that the text I wrote summarised my dilemma elegantly and honestly, so I wanted to share it:
+
+
+> The rise of AI is kind of worrying me. Everyone is saying that "the opportunity cost of not building has never been higher", implying that I should start building a company immediately. But what I really want to do is study the fundamentals: algorithms through improving at competitive programming, read books about operating systems, networking, multithreading, gpu programming and handcode stuff in those. Learn spanish, live in spain for a while. Then move to italy with my mom to learn italian. Study more mathematics. Become more articulate. Do social challenges and train the ability to talk to anyone. Play music. Create music.
+
+> But of course money is needed. I could continue in my current job at Hamina and live quite well. But if I now did some company, i could make A LOT of money and then fulfill my other dreams with the money i've made. But probably that is a bad heuristic.
+
+
+
+### For those interested, here is what Opus answered:
+
+
+> You already know the answer, I think. You called it out yourself — "probably that is a bad heuristic."
+
+> It is. And here's why.
+
+> The "make money first, then do what I love" plan almost never plays out the way people imagine. Starting a company isn't a 1-2 year detour — it's a 5-10 year commitment that reshapes your identity, your daily life, and what you spend your mental energy on. And even if it works financially, you come out the other side as a different person with different desires. The 22-year-old who wanted to learn Italian in a small town and handcode an OS kernel may not survive inside the 30-year-old founder who's been grinding on B2B SaaS for seven years.
+
+> The things you listed — competitive programming depth, low-level systems work, mathematics, languages, music, becoming more articulate, social confidence — those aren't "nice-to-haves you do after making money." They're foundational investments in *who you become*. And your early-to-mid twenties are genuinely the best time to make them. Your brain is still in its peak plasticity window for language acquisition. You have low fixed costs. You don't have a mortgage or kids demanding your attention.
+
+> A few things I'd push back on, though, to keep this honest:
+
+> The "everyone says build now" crowd has survivorship bias baked into their message. The people tweeting that are the ones for whom it worked. You don't hear from the thousands who spent their best years on a startup that went nowhere and came out with neither money nor deep skills.
+
+> That said — you do need to be honest about whether the "study fundamentals" path is genuinely what calls to you, or whether it's partly a comfortable way to avoid the scarier, messier work of figuring out what you want to *make* in the world. Only you can answer that. But the fact that your list includes living in Spain, social challenges, and creating music — not just hiding in a library — suggests this is a real vision, not avoidance.
+
+> You're at Hamina, you have Databricks coming up. You're not behind. You're 20 or 21 with an IOI selection, a startup job, and a Databricks internship on your CV. You have *more* runway than almost anyone worrying about this question. The opportunity cost of not building is real, but so is the opportunity cost of not becoming the person you actually want to be.
