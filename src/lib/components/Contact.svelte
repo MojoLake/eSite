@@ -42,4 +42,9 @@
             <img src="/semail.svg" alt="email logo"/>
         </a>
     </li>
+    <li>
+        <a href="/publickey" target="_blank" rel="noopener noreferrer">
+            <img src="/key.svg" alt="PGP public key"/>
+        </a>
+    </li>
 </ul>
