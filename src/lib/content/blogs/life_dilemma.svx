@@ -3,7 +3,7 @@ title: "What to do in life"
 date: "2026-02-12"
 summary: "Short thoughts about what I should do with my life"
 tags: ["life"]
-published: true
+published: false
 ---
 
 ### Today I was talking with Opus 4.6 about what I should do with life.
