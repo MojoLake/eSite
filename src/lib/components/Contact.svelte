@@ -10,6 +10,10 @@
         height: 2rem;
     }
 
+    .key-icon {
+        transform: translateY(3px);
+    }
+
     li {
       list-style-type: none;
     }
@@ -44,7 +48,7 @@
     </li>
     <li>
         <a href="/publickey" target="_blank" rel="noopener noreferrer">
-            <img src="/key.svg" alt="PGP public key"/>
+            <img src="/key.svg" alt="PGP public key" class="key-icon"/>
         </a>
     </li>
 </ul>
