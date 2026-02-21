@@ -1,0 +1,11 @@
+---
+title: "Spanish Blog Post #1"
+date: "2026-02-21"
+summary: "My first Spanish blog post."
+tags: ["spanish"]
+language: "es"
+kind: "blog"
+published: true
+---
+
+Hola el mundo!

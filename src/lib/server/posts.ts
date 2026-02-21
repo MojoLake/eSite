@@ -1,9 +1,14 @@
-type PostMeta = {
+export type PostLanguage = 'en' | 'es';
+export type PostKind = 'blog' | 'song-translation';
+
+export type PostMeta = {
   slug: string;
   title: string;
   date: string;
   summary?: string;
   tags?: string[];
+  language?: PostLanguage;
+  kind?: PostKind;
   published?: boolean;
 };
 
@@ -19,8 +24,16 @@ const loadAllPostsOnce = (): PostMeta[] => {
 
   const posts = Object.entries(modules).map(([path, mod]: any) => {
     const slug = path.split('/').pop()?.replace('.svx', '');
-    const { title, date, summary, tags, published = false } = mod.metadata || {}; // assume not published if not marked
-    return { slug, title, date, summary, tags, published} satisfies PostMeta;
+    const {
+      title,
+      date,
+      summary,
+      tags,
+      language,
+      kind,
+      published = false
+    } = mod.metadata || {}; // assume not published if not marked
+    return { slug, title, date, summary, tags, language, kind, published } satisfies PostMeta;
   })
   .filter(p => p.title && p.date && p.published !== false)
   .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
