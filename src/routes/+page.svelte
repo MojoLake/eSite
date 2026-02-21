@@ -56,12 +56,7 @@
           </p>
 
           <p>
-            Recently, I've started emitting my consciousness as posts on my 
-            <a
-                href="https://x.com/elias_simojoki"
-                target="_blank"
-                rel="noopener noreferrer"
-            >𝕏-account</a>.
+            During my free time I like to read a lot of books. If you have any recommendations, please tell!
           </p>
         </div>
       </div>
