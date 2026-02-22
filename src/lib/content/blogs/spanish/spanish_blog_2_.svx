@@ -8,9 +8,12 @@ kind: "blog"
 published: true
 ---
 
-Antes de corregir con IA:
+### Antes de corregir con IA:
+
 Hoy veo los Olimpicos de Invierno. Hoy está el 50km esquí de mujeres. Finlandia tiene una oportunidad para ganar un medallo.
 
+<br>
 
-Después de corregir con IA:
+### Después de corregir con IA:
+
 Hoy veo los Juegos Olímpicos de Invierno. Hoy es la prueba de 50km de esquí femenino. Finlandia tiene una oportunidad de ganar una medalla.
