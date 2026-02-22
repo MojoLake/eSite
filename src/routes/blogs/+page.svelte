@@ -8,12 +8,12 @@
 
 <div class="blogs-page">
   <div class="columns">
-    <section class="column">
+    <section class="column featured-column">
       <h1>My <Yellow>blogs</Yellow></h1>
       <ListComponent items={regularPosts} basePath="blogs" itemType="post" showCount={-1} />
     </section>
 
-    <aside class="column spanish-column">
+    <aside class="column">
       <h2>Spanish writing</h2>
       <p class="description">
         I am learning Spanish, so this section has my Spanish posts and song translations.
@@ -56,7 +56,7 @@
     line-height: 1.6;
   }
 
-  .spanish-column {
+  .featured-column {
     padding: 1rem;
     border: 1px solid rgba(114, 197, 233, 0.2);
     border-radius: 8px;
