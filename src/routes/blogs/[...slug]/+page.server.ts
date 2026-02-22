@@ -3,6 +3,9 @@ import { getPost } from '$lib/server/posts';
 
 export const load: PageServerLoad = async ({ params }) => {
   console.log(`Params.slug: ${params.slug}`);
+  if (!params.slug) {
+    return null;
+  }
   const post = await getPost(params.slug);
   if (!post) {
     console.log("Post is null!");

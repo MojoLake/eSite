@@ -4,7 +4,7 @@
     data: { slug: string; title: string; date: string; summary: string; content: string; }
   }>();
 
-  const modules = import.meta.glob('$lib/content/blogs/*.svx');
+  const modules = import.meta.glob('$lib/content/blogs/**/*.svx');
 
   console.log(`Available keys: ${Object.keys(modules)}`);
   const key = `/src/lib/content/blogs/${data.slug}.svx`;
@@ -15,9 +15,11 @@
 
   let ContentComponent: any = $state(null);
 
-  $effect(async() => {
-    const mod: any = await modules[key]();
-    ContentComponent = mod.default;
+  $effect(() => {
+    (async () => {
+      const mod: any = await modules[key]();
+      ContentComponent = mod.default;
+    })();
   });
 
 </script>

@@ -20,10 +20,12 @@ export type Post = {
 let _allPosts: PostMeta[] | null = null
 
 const loadAllPostsOnce = (): PostMeta[] => {
-  const modules = import.meta.glob('/src/lib/content/blogs/*.svx', { eager: true });
+  const modules = import.meta.glob('/src/lib/content/blogs/**/*.svx', { eager: true });
 
   const posts = Object.entries(modules).map(([path, mod]: any) => {
-    const slug = path.split('/').pop()?.replace('.svx', '');
+    const slug = path
+      .replace('/src/lib/content/blogs/', '')
+      .replace('.svx', '');
     const {
       title,
       date,
@@ -49,7 +51,7 @@ export const getAllPosts = (): PostMeta[] => {
 
 export const getPost = async (slug: string): Promise<Post | null> => {
   console.log(`Slug inside getPost: ${slug}`);
-  const modules = import.meta.glob('/src/lib/content/blogs/*.svx');
+  const modules = import.meta.glob('/src/lib/content/blogs/**/*.svx');
   const loader = modules[`/src/lib/content/blogs/${slug}.svx`];
   if (!loader) {
     console.log("Loader not found...");
@@ -60,4 +62,3 @@ export const getPost = async (slug: string): Promise<Post | null> => {
   const content = mod.default;
   return { post_meta, content } satisfies Post;
 }
-
