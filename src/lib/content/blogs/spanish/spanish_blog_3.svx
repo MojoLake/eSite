@@ -1,0 +1,15 @@
+---
+title: "Spanish Blog Post #3"
+date: "2026-02-23"
+summary: "Hablando de Español 7b"
+tags: ["spanish"]
+language: "es"
+kind: "blog"
+published: true
+---
+
+Hoy tenía el primero clase de curso español 7b. En el periodo anterior tomé el español 4. 
+Así, el español 7b as difícil para mi pero practicare mucho y creo que puedolo completar.
+Tengo mucho motivatión para estudiar español ahora y un clase donde hablamos mucho español es
+perfecto para mi.
+ 
