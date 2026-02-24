@@ -1,0 +1,13 @@
+---
+title: "Spanish Blog Post #4"
+date: "2026-02-24"
+summary: "Hablando de mí dia"
+tags: ["spanish"]
+language: "es"
+kind: "blog"
+published: true
+---
+
+Hoy ha estado un día de trabajo. Escribía (IA escribía) mucho
+codigo. Después fui al gimnasio para practicar el v-sit. Es tanto difícil pero cúando lo aprendo será muy feliz.
+ 
