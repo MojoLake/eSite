@@ -1,0 +1,14 @@
+---
+title: "Spanish Blog Post #5"
+date: "2026-02-25"
+summary: "Un blog muy rapido"
+tags: ["spanish"]
+language: "es"
+kind: "blog"
+published: true
+---
+ 
+He estado muy (busy) hoy y así to he tenido tiempo
+para escribir un blog.
+
+ 
