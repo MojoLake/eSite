@@ -46,6 +46,13 @@ kind: "blog"
 published: true
 ---
 
+### Antes de corregir con IA:
+
+
+<br>
+
+### Después de corregir con IA:
+
 EOF
 
 echo "Created: ${FILE_PATH}"
