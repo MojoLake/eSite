@@ -1,0 +1,22 @@
+---
+title: "Spanish Blog Post (2026-02-26)"
+date: "2026-02-26"
+summary: ""
+tags: ["spanish"]
+language: "es"
+kind: "blog"
+published: true
+---
+
+### Antes de corregir con IA:
+
+Hoy está el ceremonía de abrir de Founders House Helsinki. Estoy emocionando (excited) por eso. Por fin Finlandia tiene su propia Founders House.
+Espero que esta empezará un start-up boom en Finlandía que salve la economia y nuestro país de bienestar. 
+
+<br>
+
+### Después de corregir con IA:
+Hoy es la ceremonia de inauguración de Founders House Helsinki. Estoy muy emocionado por eso. Por fin Finlandia tiene su propia Founders House.
+Espero que esto marque el comienzo de un boom de startups en Finlandia que auyde a salvar la economía y nuestro estado de bienestar.
+
+
