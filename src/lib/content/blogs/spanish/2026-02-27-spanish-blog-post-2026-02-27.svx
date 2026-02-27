@@ -1,0 +1,17 @@
+---
+title: "Spanish Blog Post (2026-02-27)"
+date: "2026-02-27"
+summary: ""
+tags: ["spanish"]
+language: "es"
+kind: "blog"
+published: true
+---
+
+### Antes de corregir con IA:
+Hoy escuchaba un presentación de Eric Malmi en LLMs (idioma modeles grandes = IMG?). 
+
+<br>
+
+### Después de corregir con IA:
+- 
