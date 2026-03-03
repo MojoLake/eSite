@@ -1,0 +1,23 @@
+---
+title: "Spanish Blog Post (2026-03-03)"
+date: "2026-03-03"
+summary: ""
+tags: ["spanish"]
+language: "es"
+kind: "blog"
+published: true
+---
+
+### Antes de corregir con IA:
+Es mas divertido de aprender una nueva idioma cuando
+puedes leer libros en esa lengua. Después, puedes
+simplemente leer algo interesante y aprendes la
+lengua ahora mismo.
+
+<br>
+
+### Después de corregir con IA:
+Es más divertido aprender un nueva idioma cuando
+puedes leer libros en ese idioma. Después, puedes
+simplemente leer algo interesante y aprendes la
+lengua al mismo tiempo.
