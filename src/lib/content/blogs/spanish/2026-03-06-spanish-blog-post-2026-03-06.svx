@@ -1,0 +1,18 @@
+---
+title: "Spanish Blog Post (2026-03-06)"
+date: "2026-03-06"
+summary: ""
+tags: ["spanish"]
+language: "es"
+kind: "blog"
+published: true
+---
+
+### Antes de corregir con IA:
+Ayer estaba el fiesta de despedida de mi amigo. El se mudará a San Fransisco. Le voy a faltar, sin embargo estoy feliz por le.
+
+
+<br>
+
+### Después de corregir con IA:
+Ayer fue la fiesta de despedidad de mi amigo. Él se mudará a San Fransisco. Lo voy a extrañar, sin embargo estoy feliz por él.
