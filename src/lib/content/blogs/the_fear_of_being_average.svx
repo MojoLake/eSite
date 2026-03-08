@@ -1,0 +1,35 @@
+---
+title: "The fear of being average"
+date: "2026-03-08"
+summary: "How to live a fulfilling life."
+tags: ["life"]
+published: true
+---
+
+I watched this great video recommended by my friend Otto about the fear of being average.
+
+It's main thesis was that living a fulfilling life is not about achieving your dream job, it's about living your life with less fear of the unknown.
+
+Having a stable 9 to 5 job and a good family might classify someone as "average". Society tends to make us think that it's bad to be average. This is problematic, since having a stable job and a good family should be a positive thing!
+
+But something is still missing. Many people who lived a life like this feel like they did not live a fulfilling life. The problem is not the stable job nor the good family. It's the fear of doing something new, stepping to the unknown. Exploring life.
+
+This doesn't mean quitting one's job and moving to the other side of the world. It can start from the small stuff in everyday life that you have always wanted to do but never did: trying the new weird hobby, making youtube videos about your interest, making a speech in the next party you are at... the list is infinite and everyone has their own.
+
+I'm sure everyone has something they have always wanted to do but never got around to doing. Probably if they did it, they would be 5% happier for the rest of the year. 
+
+Thus if they did approximately 14.02 new things they wanted to do they would double their happiness that year! The maths don't lie.
+
+This can be thought of as an epsilon-greedy strategy where for most of the time you follow your established and healthy routine but epsilon fraction of the time you do something new!
+
+Go have a capuccino close to a beautiful church and just appreciate its beauty (my friend Eemil taught me this), greet a stranger just to confuse them, send a written letter to your grandma, or whatever your heart craves.
+
+Have a fulfilling life everyone!
+
+- elias
+
+[the video](https://www.youtube.com/watch?v=BLl3xREFEsY)
+
+
+
+
