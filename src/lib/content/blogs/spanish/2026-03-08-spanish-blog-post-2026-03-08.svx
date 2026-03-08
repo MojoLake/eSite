@@ -1,0 +1,40 @@
+---
+title: "Spanish Blog Post (2026-03-08)"
+date: "2026-03-08"
+summary: ""
+tags: ["spanish"]
+language: "es"
+kind: "blog"
+published: true
+---
+
+### Antes de corregir con IA:
+Esta mañana leí algo 30 paginas de Harry Potter y la Piedra Filosofal (en español por supuesto).
+Es el primer "real" libro que he leído en español.
+Realizar que puedes leer libros en la idioma que estas aprendiendo es super motivando.
+Ahora, puedo aprender español sencillamente "through" leer libros interesantes.
+
+Hay muchas palabras que yo no conozco, casí oración tiene palabras que yo
+no sé que significanlas. Pero  esa no es una problema. Tantas palabras puedo
+entender en contexto y casí todo de lo demás no necesito entender para
+entender el texto. Si yo siento que hay algún palabra importante para entender el texto,
+yo lo escribo en un pedazo de papel y antes de leer busco que lo significa. En mi opinión, es
+muy importante que continuas leyendo (even if) si encontras palabras que no conoces, si no, 
+debes que parar cada minuto y jamás lees hasta el final.
+
+
+<br>
+
+### Después de corregir con IA:
+Esta mañana leí unas 30 páginas de Harry Potter y la piedra filosofal (en español, por supuesto).
+Es el primer libro "de verdad" que he leído en español. 
+Darte cuenta de que puedes leer libros en el idioma que estás aprendiendo es súper motivador.
+Ahora puedo aprender español simplemente leyendo libros interesantes.
+
+Hay muchas palabras que no conozco; casi cada oración tiene palabras que no sé qué significan.
+Pero eso no es un problema. Muchas palabras las puedo entender por el contexto y casi todo
+lo demás no necesito entenderlo para comprender el texto. Si siento que hay alguna palabra
+importante para entender el texto, la escribo en un pedazo de papel y, antes de seguir
+leyendo, busco qué significa. En mi opinión, es muy importante que sigas leyendo aunque te
+encuentres con palabras que no conoces; si no, tienes que parar cada minuto y nunca terminas
+de leer.
