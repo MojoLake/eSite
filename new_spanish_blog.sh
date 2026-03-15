@@ -46,12 +46,12 @@ kind: "blog"
 published: true
 ---
 
-### Antes de corregir con IA:
+### Después de corregir con IA:
 
 
 <br>
 
-### Después de corregir con IA:
+### Antes de corregir con IA:
 
 EOF
 
