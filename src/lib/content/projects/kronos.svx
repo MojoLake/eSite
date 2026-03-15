@@ -1,0 +1,10 @@
+---
+title: "Kronos"
+date: "2025-04-05"
+summary: "Automated property maintenance by generating photorealistic 3D models from drone footage using Gaussian splatting, then detecting structural differences and problems automatically."
+published: true
+---
+
+Automated property maintenance pipeline that processes drone footage to create photorealistic 3D models using Gaussian splatting. The system then automatically compares models over time to detect structural differences and identify maintenance issues.
+
+![Turunlinna](/turunlinna.png)
