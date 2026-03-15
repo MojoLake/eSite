@@ -1,7 +1,7 @@
 ---
-title: "Kronos"
+title: "Kronos (our startup project for competing at GSSC)"
 date: "2025-04-05"
-summary: "Automated property maintenance by generating photorealistic 3D models from drone footage using Gaussian splatting, then detecting structural differences and problems automatically."
+summary: "Automating property maintenance by generating photorealistic 3D models from drone footage using Gaussian splatting, then detecting structural differences and problems automatically."
 published: true
 ---
 
