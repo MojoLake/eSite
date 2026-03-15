@@ -44,13 +44,14 @@ export const getAllProjects = (): ProjectMeta[] => {
 }
 
 export const getProject = async (slug: string): Promise<Project | null> => {
-  const project_meta: ProjectMeta = {
-    slug: "drone",
-    title: "Building a Drone",
-    date: "14/05/2025",
-    summary: "Me and my friends built a drone together",
-    published: true,
-  };
-  const content = "this is the content";
-  return { project_meta, content } satisfies Project;
+  const modules = import.meta.glob('/src/lib/content/projects/*.svx', { eager: true });
+  const path = `/src/lib/content/projects/${slug}.svx`;
+  const mod: any = modules[path];
+  if (!mod) return null;
+
+  const { title, date, summary, liveUrl, githubUrl, relevancy, published = false } = mod.metadata || {};
+  if (!published) return null;
+
+  const project_meta: ProjectMeta = { slug, title, date, summary, liveUrl, githubUrl, relevancy, published };
+  return { project_meta, content: mod.default } satisfies Project;
 }

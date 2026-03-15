@@ -12,5 +12,6 @@ export const load: PageServerLoad = async ({ params }) => {
   return {
     slug: params.slug,
     title: post.project_meta.title,
+    summary: post.project_meta.summary ?? '',
   }
 }
