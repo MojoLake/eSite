@@ -1,9 +1,16 @@
 ---
-title: "The fear of being average"
-date: "2026-03-08"
-summary: "How to live a fulfilling life."
-tags: ["life"]
+title: The fear of being average
+date: '2026-03-08'
+summary: How to live a fulfilling life.
+tags:
+- life
 published: true
+substack_uploaded: true
+substack_status: published
+substack_draft_id: 191747488
+substack_post_id: 191747488
+substack_content_hash: a5840c1b6e95a4a6c02fba40472322ece45789c8c43810b7885204e3c32dccff
+substack_uploaded_at: '2026-03-22T11:23:01+00:00'
 ---
 
 I watched this great video recommended by my friend Otto about the fear of being average.

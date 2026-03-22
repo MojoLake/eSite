@@ -173,7 +173,11 @@ def build_arg_parser() -> argparse.ArgumentParser:
 
 
 def get_setting(cli_value: str | None, env_name: str) -> str | None:
-    return cli_value if cli_value is not None else os.getenv(env_name)
+    value = cli_value if cli_value is not None else os.getenv(env_name)
+    if value is None:
+        return None
+    stripped = value.strip()
+    return stripped or None
 
 
 def create_api(args: argparse.Namespace):

@@ -1,9 +1,16 @@
 ---
-title: "What to do in life"
-date: "2026-02-12"
-summary: "Short thoughts about what I should do with my life"
-tags: ["life"]
+title: What to do in life
+date: '2026-02-12'
+summary: Short thoughts about what I should do with my life
+tags:
+- life
 published: false
+substack_uploaded: true
+substack_status: draft
+substack_draft_id: 191747429
+substack_post_id: null
+substack_content_hash: 1c881bd4ec4cc495d617749ca8f84d50a420a13b68100ce77cfe5ff493cdffcc
+substack_uploaded_at: '2026-03-22T11:14:20+00:00'
 ---
 
 ### Today I was talking with Opus 4.6 about what I should do with life.
