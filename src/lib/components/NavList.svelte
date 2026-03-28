@@ -1,10 +1,17 @@
 <script lang="ts">
-  let { onClick, variant = "desktop" } = $props();
+  let {
+    onClick,
+    variant = "desktop",
+  }: {
+    onClick?: ((event: MouseEvent) => void) | undefined;
+    variant?: "desktop" | "mobile";
+  } = $props();
 
   let items = [
     { text: "eLias", href: "/" },
     { text: "eBlogs", href: "/blogs" },
     { text: "eProjects", href: "/projects" },
+    { text: "100 Rejections", href: "/rejection-therapy" },
     { text: "eResources", href: "/resources" },
   ];
 </script>

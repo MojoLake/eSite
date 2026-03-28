@@ -5,7 +5,13 @@
     name,
     size = 24,
     ariaLabel,
-  }: { name: string; size?: number; ariaLabel?: string } = $props();
+    style,
+  }: {
+    name: string;
+    size?: number;
+    ariaLabel?: string;
+    style?: string;
+  } = $props();
 </script>
 
 <svg
@@ -14,6 +20,7 @@
   width={size}
   height={size}
   aria-label={ariaLabel}
+  {style}
 >
   <use href={`${base}/icons.svg#${name}`}></use>
 </svg>
