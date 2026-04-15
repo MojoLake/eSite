@@ -5,7 +5,7 @@
 
 <div class="container">
   <h1>eProjects</h1>
-  <p class="subtitle">Things I've built that.</p>
+  <p class="subtitle">Things I've built.</p>
 
   <div class="projects">
     {#each projects as project}
