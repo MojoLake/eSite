@@ -5,7 +5,7 @@
 
 <div class="container">
   <h1>eProjects</h1>
-  <p class="subtitle">Things I've built that you can try out.</p>
+  <p class="subtitle">Things I've built that.</p>
 
   <div class="projects">
     {#each projects as project}
@@ -17,7 +17,7 @@
         <div class="project-links">
           {#if project.liveUrl}
             <a href={project.liveUrl} target="_blank" class="link-badge live">
-              <span class="link-icon">🌐</span> Live
+              <span class="link-icon">🌐</span> Website
               <span class="external-link">↗</span>
             </a>
           {/if}
