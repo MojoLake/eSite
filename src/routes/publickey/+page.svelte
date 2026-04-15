@@ -42,7 +42,7 @@ EFiuNC4LYAvolFsBANyjAWsIk9/0BQoxtR06aNDjlPljvP/a0T6T8y2dKy9bAQCm
     overflow-x: auto;
     padding: 1rem;
     border: 1px solid var(--border-colour, #444);
-    border-radius: 8px;
+    border-radius: 0;
     background: var(--code-background-colour, #111);
   }
 </style>

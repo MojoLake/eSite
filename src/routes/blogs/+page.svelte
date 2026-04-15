@@ -59,7 +59,7 @@
   .featured-column {
     padding: 1rem;
     border: 1px solid rgba(114, 197, 233, 0.2);
-    border-radius: 8px;
+    border-radius: 0;
     background: rgba(114, 197, 233, 0.05);
   }
 

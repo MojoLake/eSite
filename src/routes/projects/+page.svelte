@@ -65,9 +65,9 @@
     display: block;
     position: relative;
     padding: 1.5rem;
-    background: rgba(114, 197, 233, 0.05);
+    background: transparent;
     border: 1px solid rgba(114, 197, 233, 0.15);
-    border-radius: 8px;
+    border-radius: 0;
   }
 
   .project-header {
@@ -101,7 +101,7 @@
     align-items: center;
     gap: 0.4rem;
     padding: 0.4rem 0.8rem;
-    border-radius: 6px;
+    border-radius: 0;
     font-size: 0.85rem;
     text-decoration: none;
     transition: all 0.2s ease;

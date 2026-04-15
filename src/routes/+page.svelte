@@ -28,10 +28,6 @@
         hi! i'm <span style="color: var(--secondary-text-colour)">elias</span>,
       </h1>
 
-      <!-- <p class="welcome-text">
-        Welcome to the website! Have a deep breath and enjoy :)
-      </p> -->
-
       <div class="about-section">
         <img src="/IMG_4668.jpeg" alt="Elias" class="profile-photo" />
 
@@ -51,12 +47,11 @@
             🇫🇮).
           </p>
           <p>
-            I have won multiple hackathons, built a custom drone and been a
-            cyber security researcher at the Finnish Defence Research Agency.
+            Recently I've been excited about talking to strangers, being more social and overall living a less predictable life that way!
           </p>
-
+            If anything on this website seems interesting to you, feel free to send me an <a href="mailto:simo.simojoki@gmail.com"><Yellow>email</Yellow></a>.
           <p>
-            During my free time I like to read a lot of books. If you have any recommendations, please tell!
+
           </p>
         </div>
       </div>
@@ -140,7 +135,7 @@
     flex-shrink: 0;
     width: 200px;
     height: 200px;
-    border-radius: 8px;
+    border-radius: 0;
     object-fit: cover;
   }
 

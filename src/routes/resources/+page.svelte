@@ -123,16 +123,15 @@
     display: block;
     position: relative;
     padding: 1.25rem 1.5rem;
-    background: rgba(114, 197, 233, 0.05);
+    background: transparent;
     border: 1px solid rgba(114, 197, 233, 0.15);
-    border-radius: 8px;
+    border-radius: 0;
     text-decoration: none;
     color: inherit;
     transition: all 0.2s ease;
   }
 
   a.item-card:hover {
-    background: rgba(114, 197, 233, 0.1);
     border-color: rgba(114, 197, 233, 0.3);
     transform: translateY(-2px);
   }
@@ -177,7 +176,7 @@
     margin-top: 1.5rem;
     padding: 1rem 1.5rem;
     background: rgba(237, 204, 112, 0.08);
-    border-radius: 8px;
+    border-radius: 0;
     text-align: center;
     font-size: 0.95rem;
   }
