@@ -9,11 +9,37 @@
   const events: RejectionEvent[] = [
     {
       day: 1,
-      title: "Ask for a Free Coffee",
+      title: "Ask strangers if I can come make tea at their home",
       notes:
-        "Dummy text for day one. Replace this with what you asked, what happened, and what you learned.",
+        "I walked around the neighbourhood with a tea packet. I greeted strangers, claiming that my kettle was broken and asking if I could prepare my tea at theit home. I asked 4 people and everyone said no. It was quite late, 8pm, so that might have had an effect as well.",
       videoUrl: "",
     },
+    {
+      day: 2,
+      title: "Store my frozen peas in a strangers freezer",
+      notes:
+        "Walking in the neighbourhood with a pack of frozen peas. I claimed that my freezer was broken and that I did not want to eat my peas today so I asked if I could store my peas overnight in their freezer. Three rejections!",
+      videoUrl: "",
+    },
+    {
+        day: 3,
+        title: "Borrow toilet paper because friend is over in the restroom and it ran out",
+        notes: "Exactly what the title says. The first guy (Bilal) that I approached said yes, so we walked to his house - having a nice discussion on the way there - and I walked away with a handful of paper tissues! So day 3 failed: no rejection."
+    },
+    {
+        day: 4,
+        title: "Ask a stranger to pray that I get accepted to Y Combinator",
+        notes: "Yeah. And he did!"
+    },
+    {
+        day: 5,
+        title: "Buy a chocolate egg and ask the cashier to hide it for me",
+        notes: "She said no. So success!"
+    },
+    {
+        day: 6,
+        title: ""
+    }
   ];
 </script>
 
@@ -23,6 +49,8 @@
 
 <div class="page">
   <h1>100 Days of Rejection</h1>
+
+  <p>Inspired by Jia Jiang and he's book "Rejection Proof".</p>
 
   <ul class="events">
     {#each events as event}
