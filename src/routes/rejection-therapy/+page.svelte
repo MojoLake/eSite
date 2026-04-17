@@ -9,7 +9,7 @@
   const events: RejectionEvent[] = [
     {
       day: 1,
-      title: "Ask strangers if I can come make tea at their home",
+      title: "Ask if I can come make tea at people's homes",
       notes:
         "I walked around the neighbourhood with a pack of tea. I greeted strangers, claiming that my kettle was broken and asking if I could prepare my tea at their home. I asked 4 people and everyone said no. It was quite late, 8pm, so that might have had an effect as well.",
       videoUrl: "",
