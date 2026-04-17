@@ -18,17 +18,9 @@ echo "Syncing to server..."
 rsync -avz --delete \
   --exclude='.git' \
   --exclude='.svelte-kit' \
-  --exclude='src' \
-  --exclude='.gitignore' \
-  --exclude='README.md' \
-  --exclude='tsconfig.json' \
-  --exclude='svelte.config.js' \
-  --exclude='vite.config.ts' \
-  --exclude='static' \
-  --exclude='yarn.lock' \
-  --exclude='TODO.md' \
+  --exclude='build/client/__MACOSX' \
+  --exclude='build/**/*.map' \
   build \
-  node_modules \
   package.json \
   "$HOST:$APP_DIR/"
 
