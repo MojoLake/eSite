@@ -47,7 +47,10 @@
             🇫🇮).
           </p>
           <p>
-            Recently I've been excited about talking to strangers, being more social and overall living a less predictable life that way!
+            Recently I've been excited about <a href="/rejection-therapy"
+              ><Yellow>talking to strangers</Yellow></a
+            >, being more social and overall living a less predictable life that
+            way!
           </p>
             If anything on this website seems interesting to you, feel free to send me an <a href="mailto:simo.simojoki@gmail.com"><Yellow>email</Yellow></a>.
           <p>
