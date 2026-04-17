@@ -38,7 +38,10 @@
     },
     {
         day: 6,
-        title: ""
+        title: "3 things: 1. ask to model for a photo shop(?), 2. ask for free hangers in a clothing store, 3. ask to make an announcement at a shopping mall",
+        notes: `1. They gave me the email of the person who handles the social media.
+        2. The woman was super nice and said of course I can have some hangers, went to the backroom and came out with a giant bag. I had to tell her I only need 4 instead of 40 :)
+        3. Didn't get to announce but had a nice conversation with the person at the info desk. I learned that the shopping mall owns the music the play. When it was built, there was apparently a song contest and the best ones were chosen for the official track of the shopping mall, Kamppi.`
     }
   ];
 </script>
@@ -56,7 +59,7 @@
     {#each events as event}
       <li>
         <h2>Day {event.day}: {event.title}</h2>
-        <p>{event.notes}</p>
+        <p class="notes">{event.notes}</p>
 
         {#if event.videoUrl}
           <p>
@@ -88,6 +91,11 @@
 
   .events li {
     margin-bottom: 2rem;
+  }
+
+  .notes {
+    line-height: 1.6;
+    white-space: pre-line;
   }
 
   h2 {
