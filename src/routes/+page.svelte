@@ -64,7 +64,7 @@
   {#if showContent}
     <div class="content-container" in:fade={{ duration: 1000 }}>
       <div class="column">
-        <h3>Blogs</h3>
+        <h3><a href="/blogs" class="section-link">Blogs</a></h3>
         <ListComponent
           items={posts}
           basePath="blogs"
@@ -73,7 +73,7 @@
         />
       </div>
       <div class="column">
-        <h3>Projects</h3>
+        <h3><a href="/projects" class="section-link">Projects</a></h3>
         <ListComponent
           items={projects}
           basePath="projects"
@@ -85,7 +85,7 @@
   {:else}
     <div class="content-container" style="opacity: 0;">
       <div class="column">
-        <h3>Blogs</h3>
+        <h3><a href="/blogs" class="section-link">Blogs</a></h3>
         <ListComponent
           items={posts}
           basePath="blogs"
@@ -94,7 +94,7 @@
         />
       </div>
       <div class="column">
-        <h3>Projects</h3>
+        <h3><a href="/projects" class="section-link">Projects</a></h3>
         <ListComponent
           items={projects}
           basePath="projects"
@@ -180,6 +180,15 @@
 
   .column h3 {
     margin-bottom: 1rem;
+  }
+
+  .section-link {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .section-link:hover {
+    text-decoration: underline;
   }
 
   @media (max-width: 600px) {
