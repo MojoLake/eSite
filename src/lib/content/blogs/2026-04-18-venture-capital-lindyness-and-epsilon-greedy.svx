@@ -1,0 +1,21 @@
+---
+title: "Venture capital, lindyness and epsilon greedy"
+date: "2026-04-18"
+summary: ""
+tags: []
+published: false
+---
+
+Lindyness is the idea that if something (usually non-alive) has survived a long time, it will probably survive another long time as well.
+
+For example, since forks have been around for ~2000? years, they will probably be around for another 2000 years. Same for eg. shoes (even longer).
+
+Then again the newest meme has been around for one week so you cannot really expect it to be relevant after 1 year.
+
+So: concepts that have lived for long will probably (statistically?) still live long and concepts that are new have a lower expted life (measured from now).
+
+But this is just a statistical fact/heuristic. Not all new things are doomed. 
+
+This is the point of venture capital (VC): fund many new ideas/projects (startups they say) and hope that some of them survive the test of lindyness. Most of the new things will not survive: that is the point of new things.
+
+This is like the universes epsilon-greedy where mainly it just folllows the good old strategy that has been deemed to work well but epsilon -fraction of the time it tries (and allows) new ideas.
