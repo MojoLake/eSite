@@ -48,9 +48,11 @@
     align-items: center;
     justify-content: flex-start; 
 
+    width: 100%;
     padding: 2rem 0.75rem;
     margin: 0 auto;
     max-width: 60rem;
+    box-sizing: border-box;
   }
 
   .summary {
@@ -59,7 +61,10 @@
 
   .blog-text {
     font-size: 1.0rem;
+    width: 100%;
+    min-width: 0;
   }
+
   .blog-text :global(a) {
     color: var(--secondary-text-colour);
   }

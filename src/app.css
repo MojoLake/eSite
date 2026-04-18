@@ -17,3 +17,32 @@ html {
       /* font-family: 'JetBrains Mono', monospace; */
     /* font-family: 'Fira Code', monospace; */
 }
+
+pre {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    box-sizing: border-box;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    border: 1px solid var(--primary-title-colour);
+    border-radius: 0.5rem;
+    background: rgba(114, 197, 233, 0.08);
+}
+
+pre code {
+    display: block;
+    min-width: max-content;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    white-space: pre;
+}
+
+:not(pre) > code {
+    padding: 0.1rem 0.35rem;
+    border-radius: 0.25rem;
+    background: rgba(114, 197, 233, 0.12);
+    color: var(--secondary-text-colour);
+}
