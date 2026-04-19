@@ -1,0 +1,77 @@
+---
+title: "Setting up Nix-darwin in 2026"
+date: "2026-04-18"
+summary: "Quick tutorial on setting up Nix-darwin"
+tags: []
+published: true
+---
+
+Hi, I'm setting pu Nix-darwin using some two year old [tutorial](https://davi.sh/blog/2024/01/nix-darwin/) so I'm writing my experience and any roadblocks encountered here. You'll find end result at the end. I hope this is helpful to someone.
+
+## Things I had to do differently from the tutorial:
+- The nix-darwin url is wrong. Probably still resolves but the correct repo is now github:nix-darwin/nix-darwin
+- There have been some updates, use `system.stateversion = 6;` instead of 4.
+- `programs.zsh.enable = true;` is valid but is already the default so this line is not needed.
+- Remove the line: services.nix-daemon.enable = true; Otherwise it will fail because current nix-darwin asserts that services.nix-daemon.enable no longer has any effect and should be removed. Apparently nix-darwin now manages the daemon automatically
+- I used determinate to install nix on my machine so I had to remove the line: `nix.enable = false;`
+- neofetch isn't anymore, use fastfetch:
+`environment.systemPackages = [ pkgs.neofetch ];`
+
+- At the very end: `security.pam.enableSudoTouchIdAuth = true;` doesn't work anymore use `security.pam.services.sudo_local.touchIdAuth = true;` instead.
+
+
+
+Surprises for me:
+- Nix flakes are STILL an experimental feature. I assumed they wouldn't be.
+- When running `sudo nix run nix-darwin --extra-experimental-features nix-command --extra-experimental-features flakes -- switch --flake ~/.config/nix` I got:
+warning: $HOME ('/Users/mojolake') is not owned by you, falling back to the one defined in the 'passwd' file ('/var/root').
+This is apparently ok.
+
+So finally this ended up working for me:
+
+```nix
+# ~/.config/nix/flake.nix
+{
+    description = "My system configuration";
+
+    inputs = {
+        nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+        nix-darwin = {
+            url = "github:nix-darwin/nix-darwin";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
+    };
+
+    outputs = inputs@{ self, nix-darwin, nixpkgs }:
+    let
+        configuration = {pkgs, ... }: {
+            # This line is necessary (according to AI...) because I installed nix using Determinate
+            nix.enable = false;
+
+            system.configurationRevision = self.rev or self.dirtyRev or null;
+            system.stateVersion = 6;
+
+            # If on Intel system, use `x86_64-darwin` instead
+            nixpkgs.hostPlatform = "aarch64-darwin";
+
+            # Declare the user that will be running `nix-darwin`
+            users.users.$USER = {
+                home = "/Users/$USER";
+            };
+
+            environment.systemPackages = with pkgs; [
+                fastfetch
+                go
+            ];
+            security.pam.services.sudo_local.touchIdAuth = true;
+        };
+    in
+    {
+        darwinConfigurations."$HOSTNAME" = nix-darwin.lib.darwinSystem {
+            modules = [
+                configuration
+            ];
+        };
+    };
+}
+```
