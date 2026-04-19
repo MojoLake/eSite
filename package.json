@@ -11,6 +11,7 @@
 		"prepare": "svelte-kit sync || echo ''",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"drafts": "node scripts/list_draft_blogs.mjs",
 		"substack": "uv run python scripts/substack_publish.py"
 	},
 	"devDependencies": {
