@@ -42,7 +42,7 @@
         notes: `1. They gave me the email of the person who handles the social media.
         2. The woman was super nice and said of course I can have some hangers, went to the backroom and came out with a giant bag. I had to tell her I only need 4 instead of 40 :)
         3. Didn't get to announce but had a nice conversation with the person at the info desk. I learned that the shopping mall owns the music they play. When it was built there was apparently a song contest and the best ones were chosen for the official track of the shopping mall, Kamppi.`
-    }
+    },
   ];
 </script>
 
@@ -53,7 +53,10 @@
 <div class="page">
   <h1>100 Days of Rejection</h1>
 
-  <p>Inspired by Jia Jiang and he's book "Rejection Proof".</p>
+  <p>
+        Inspired by Jia Jiang and he's book "Rejection Proof".
+        If you have any challenges ideas, please let me know!
+  </p>
 
   <ul class="events">
     {#each events as event}
