@@ -43,6 +43,16 @@
         2. The woman was super nice and said of course I can have some hangers, went to the backroom and came out with a giant bag. I had to tell her I only need 4 instead of 40 :)
         3. Didn't get to announce but had a nice conversation with the person at the info desk. I learned that the shopping mall owns the music they play. When it was built there was apparently a song contest and the best ones were chosen for the official track of the shopping mall, Kamppi.`
     },
+    {
+        day: 7,
+        title: "Ask grocery store worker to wish their coworkers a good sunday and regards from me, through their intercom",
+        notes: "I asked and she said sure and turned her back. Then I stood there awkwardly for ~2 seconds waiting for her to do it. When after 2 seconds she hadn't done it, I ran away. This was one of my weaker performances."
+    },
+    {
+        day: 8,
+        title: "Ask if Dressman, a men's clothing chain, sells bras...",
+        notes: "Not my proudest challenge. My friend has asked some strangers for ideas for these challenges and this was one of those. Well I did it and the worker said no, then I asked if some other store near does and she mentioned a few, then we both half burst out laughing :p"
+    }
   ];
 </script>
 
