@@ -1,15 +1,15 @@
 ---
 title: "Building a drone"
 date: "2025-08-01"
-summary: "My friends and I built a drone in summer 2025. This was my first proper hardware project."
+summary: "My friends and I built a drone with a thermal camera in summer 2025. This was my first proper hardware project."
 relevancy: 11
 published: true
 ---
 
 
-My friends and I built a drone in summer 2025. It was fun, and scary.
+My friends and I built a drone (with a thermal camera) in summer 2025. It was fun, and scary.
 
-Particularly scary was the first test with propellers on. We had to test it by holding it first, because bad things could have happened if we lost control of it in mid-air. Buildings were quite close.
+Particularly scary was the first test with propellers on. We had to test it by holding it first, because bad things could have happened if we lost control of it in mid-air... buildings were quite close.
 
 I ended up being the volunteer to hold it.
 
