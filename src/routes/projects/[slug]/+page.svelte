@@ -17,6 +17,7 @@
 </script>
 
 <div class="main">
+    <a class="back-link" href="/projects">Back to projects</a>
     <h1 class="title">{data.title}</h1>
     {#if data.summary}
         <div class="summary">
@@ -49,6 +50,17 @@
         font-size: 2rem;
     }
 
+    .back-link {
+        align-self: flex-start;
+        color: var(--secondary-text-colour);
+        text-decoration: none;
+        margin-bottom: 1rem;
+    }
+
+    .back-link:hover {
+        text-decoration: underline;
+    }
+
     .project-text {
         font-size: 1.0rem;
         width: 100%;
@@ -58,6 +70,5 @@
         max-width: 100%;
     }
 </style>
-
 
 

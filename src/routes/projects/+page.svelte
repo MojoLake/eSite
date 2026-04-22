@@ -11,7 +11,7 @@
     {#each projects as project}
       <div class="project-card">
         <div class="project-header">
-          <h3>{project.title}</h3>
+          <h3><a href={`/projects/${project.slug}`}>{project.title}</a></h3>
         </div>
         <p>{project.summary}</p>
         <div class="project-links">
@@ -78,8 +78,16 @@
 
   .project-card h3 {
     font-size: 1.3rem;
-    color: var(--primary-title-colour);
     margin: 0 0 0.75rem 0;
+  }
+
+  .project-card h3 a {
+    color: var(--primary-title-colour);
+    text-decoration: none;
+  }
+
+  .project-card h3 a:hover {
+    text-decoration: underline;
   }
 
   .project-card p {

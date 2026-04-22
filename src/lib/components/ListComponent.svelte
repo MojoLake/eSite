@@ -7,7 +7,7 @@
 
 <div class="main">
   {#each displayItems as item}
-    <a href={itemType === "project" ? `/${basePath}` : `/${basePath}/${item.slug}`} class="{itemType}-link">
+    <a href={`/${basePath}/${item.slug}`} class="{itemType}-link">
       <div class={itemType}>
         <h3 class="{itemType}-title">
           {item.title}

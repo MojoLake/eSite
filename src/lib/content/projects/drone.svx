@@ -1,9 +1,26 @@
 ---
 title: "Building a drone"
-date: "2025-10-31"
-summary: "Me and my friends built a drone"
-tags: ["intro", "svelte"]
-published: false
+date: "2025-08-01"
+summary: "My friends and I built a drone in summer 2025. This was my first proper hardware project."
+relevancy: 11
+published: true
 ---
 
-Me and my friends built a drone. A giant ass drone.
+
+My friends and I built a drone in summer 2025. It was fun, and scary.
+
+Particularly scary was the first test with propellers on. We had to test it by holding it first, because bad things could have happened if we lost control of it in mid-air. Buildings were quite close.
+
+I ended up being the volunteer to hold it.
+
+<video controls playsinline preload="metadata" style="max-width: 100%;">
+  <source src="/drone-project/IMG_5706.mp4" type="video/mp4" />
+  <track kind="captions" src="/drone-project/IMG_5706.vtt" srclang="en" label="English" />
+  Your browser does not support the video tag.
+</video>
+
+![Building the drone](/drone-project/drone_building.png)
+
+![Testing the drone camera](/drone-project/drone_with_heatcamera.png)
+
+This was a fun project, and my first proper hardware project.
