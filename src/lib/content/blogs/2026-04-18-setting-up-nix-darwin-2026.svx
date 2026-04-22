@@ -6,13 +6,13 @@ tags: []
 published: true
 ---
 
-Hi, I'm setting pu Nix-darwin using some two year old [tutorial](https://davi.sh/blog/2024/01/nix-darwin/) so I'm writing my experience and any roadblocks encountered here. You'll find end result at the end. I hope this is helpful to someone.
+Hi, I'm setting up Nix-darwin using some two year old [tutorial](https://davi.sh/blog/2024/01/nix-darwin/) so I'm writing my experience and any roadblocks encountered here. You'll find the end result at the end. I hope this is helpful to someone.
 
 ## Things I had to do differently from the tutorial:
 - The nix-darwin url is wrong. Probably still resolves but the correct repo is now github:nix-darwin/nix-darwin
 - There have been some updates, use `system.stateversion = 6;` instead of 4.
 - `programs.zsh.enable = true;` is valid but is already the default so this line is not needed.
-- Remove the line: services.nix-daemon.enable = true; Otherwise it will fail because current nix-darwin asserts that services.nix-daemon.enable no longer has any effect and should be removed. Apparently nix-darwin now manages the daemon automatically
+- Remove the line: `services.nix-daemon.enable = true;` Otherwise it will fail because current nix-darwin asserts that services.nix-daemon.enable no longer has any effect and should be removed. Apparently nix-darwin now manages the daemon automatically
 - I used determinate to install nix on my machine so I had to remove the line: `nix.enable = false;`
 - neofetch isn't anymore, use fastfetch:
 `environment.systemPackages = [ pkgs.neofetch ];`
