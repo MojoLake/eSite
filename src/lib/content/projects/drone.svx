@@ -23,4 +23,4 @@ I ended up being the volunteer to hold it.
 
 ![Testing the drone camera](/drone-project/drone_with_heatcamera.png)
 
-This was a fun project, and my first proper hardware project.
+This was a fun project and my first proper hardware project.
