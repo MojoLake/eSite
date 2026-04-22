@@ -1,14 +1,33 @@
 <script lang="ts">
   let { data } = $props();
   const { projects } = data;
+
+  type Order = "ranking" | "chronological";
+
+  let order = $state<Order>("ranking");
+  let orderedProjects = $derived(
+    order === "chronological"
+      ? [...projects].sort(
+          (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
+        )
+      : projects,
+  );
 </script>
 
 <div class="container">
   <h1>eProjects</h1>
   <p class="subtitle">Things I've built.</p>
 
+  <label class="order-control">
+    <span>Order:</span>
+    <select bind:value={order} aria-label="Project order">
+      <option value="ranking">My ranking</option>
+      <option value="chronological">Chronological</option>
+    </select>
+  </label>
+
   <div class="projects">
-    {#each projects as project}
+    {#each orderedProjects as project}
       <div class="project-card">
         <div class="project-header">
           <h3><a href={`/projects/${project.slug}`}>{project.title}</a></h3>
@@ -54,7 +73,31 @@
     font-size: 1.1rem;
     color: var(--primary-text-colour);
     opacity: 0.8;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  .order-control {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-text-colour);
+    font-size: 0.95rem;
+  }
+
+  .order-control select {
+    color: var(--secondary-text-colour);
+    background: transparent;
+    border: 1px solid rgba(114, 197, 233, 0.35);
+    border-radius: 0;
+    padding: 0.3rem 0.55rem;
+    font: inherit;
+  }
+
+  .order-control select:focus {
+    outline: 1px solid var(--secondary-text-colour);
+    outline-offset: 2px;
   }
 
   .projects {
