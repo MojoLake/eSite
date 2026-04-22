@@ -34,7 +34,7 @@
         </div>
         <p>{project.summary}</p>
         <div class="project-links">
-          <a href={`/projects/${project.slug}`} class="read-more">Read more</a>
+          <a href={`/projects/${project.slug}`} class="read-more">🔍 Read more</a>
           {#if project.liveUrl}
             <a href={project.liveUrl} target="_blank" class="link-badge live">
               <span class="link-icon">🌐</span> Website
