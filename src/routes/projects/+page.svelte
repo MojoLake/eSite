@@ -15,6 +15,7 @@
         </div>
         <p>{project.summary}</p>
         <div class="project-links">
+          <a href={`/projects/${project.slug}`} class="read-more">Read more</a>
           {#if project.liveUrl}
             <a href={project.liveUrl} target="_blank" class="link-badge live">
               <span class="link-icon">🌐</span> Website
@@ -100,43 +101,43 @@
 
   .project-links {
     display: flex;
+    align-items: center;
     gap: 0.75rem;
     flex-wrap: wrap;
+  }
+
+  .read-more {
+    color: var(--secondary-text-colour);
+    font-size: 0.95rem;
+    text-decoration: none;
+  }
+
+  .read-more:hover {
+    text-decoration: underline;
   }
 
   .link-badge {
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
-    padding: 0.4rem 0.8rem;
-    border-radius: 0;
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     text-decoration: none;
-    transition: all 0.2s ease;
   }
 
   .link-badge.live {
-    background: rgba(237, 204, 112, 0.15);
     color: var(--secondary-text-colour);
-    border: 1px solid rgba(237, 204, 112, 0.3);
   }
 
   .link-badge.live:hover {
-    background: rgba(237, 204, 112, 0.25);
-    border-color: rgba(237, 204, 112, 0.5);
-    transform: translateY(-2px);
+    text-decoration: underline;
   }
 
   .link-badge.github {
-    background: rgba(114, 197, 233, 0.1);
     color: var(--primary-title-colour);
-    border: 1px solid rgba(114, 197, 233, 0.2);
   }
 
   .link-badge.github:hover {
-    background: rgba(114, 197, 233, 0.2);
-    border-color: rgba(114, 197, 233, 0.4);
-    transform: translateY(-2px);
+    text-decoration: underline;
   }
 
   .link-icon {
