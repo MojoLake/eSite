@@ -61,6 +61,10 @@
     height: 100%;
   }
 
+  nav.mobile li {
+    text-align: center;
+  }
+
   li {
     font-size: 3rem;
     list-style-type: none;
@@ -68,6 +72,11 @@
 
   a {
     color: var(--primary-title-colour);
+  }
+
+  nav.mobile a {
+    display: block;
+    text-align: center;
   }
 
   a:hover {
