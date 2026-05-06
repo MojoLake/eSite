@@ -17,6 +17,15 @@ export type Post = {
   content: any;
 };
 
+export const hasTag = (post: { tags?: string[] }, tag: string): boolean =>
+  post.tags?.includes(tag) ?? false;
+
+export const isSpanishPost = (post: { language?: string; tags?: string[] }): boolean =>
+  post.language === 'es' || hasTag(post, 'es') || hasTag(post, 'spanish');
+
+export const isHiddenPost = (post: { tags?: string[] }): boolean =>
+  hasTag(post, 'hidden');
+
 let _allPosts: PostMeta[] | null = null
 
 const loadAllPostsOnce = (): PostMeta[] => {

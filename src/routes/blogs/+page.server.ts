@@ -1,13 +1,7 @@
-import { getAllPosts } from '$lib/server/posts';
-
-const hasTag = (post: { tags?: string[] }, tag: string) =>
-  post.tags?.includes(tag) ?? false;
-
-const isSpanishPost = (post: { language?: string; tags?: string[] }) =>
-  post.language === 'es' || hasTag(post, 'es') || hasTag(post, 'spanish');
+import { getAllPosts, isHiddenPost, isSpanishPost } from '$lib/server/posts';
 
 export const load = async () => {
-  const allPosts = getAllPosts();
+  const allPosts = getAllPosts().filter((post) => !isHiddenPost(post));
   const regularPosts = allPosts.filter((post) => !isSpanishPost(post));
   const spanishPosts = allPosts.filter((post) => isSpanishPost(post));
 
