@@ -1,0 +1,21 @@
+---
+title: "Do hard things - it is literally the only that matters"
+date: "2026-05-25"
+summary: ""
+tags: []
+published: true
+---
+
+Doing hard things is the only thing of (monetary) value.
+
+If it were easy, anyone would do it. It's valuable precisely because it is hard.
+
+Reflecting on my life, the reason why I'm doing well professionally is because for
+years I did hard things very few other people were doing: grinding difficult mathematics, learning competitive
+programming daily, learning how software systems work.
+
+Was it easy? No. Was it fun? Often! Was it interesting? Yes.
+
+The same applies for startups: sure you can find arbitrage opportunities and make
+money doing something easy but if you want to build a sustainable business of actual value,
+you NEED to do something hard. The reason it is valueable IS because it is hard.
