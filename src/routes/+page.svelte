@@ -33,11 +33,11 @@
 
         <div class="about-text">
           <p>
-            a machine learning engineer at <a
-              href="https://hamina.com"
-              target="_blank"
-              rel="noopener noreferrer"><Yellow>Hamina Wireless</Yellow></a
-            >
+            a Software Engineering intern at
+            <a
+                href="https://databricks.com"
+                target="_blank"
+                rel="noopener noreferrer"><Yellow>Databricks</Yellow></a>
             and a mathematics student at
             <a
               href="https://www.aalto.fi/en"
@@ -45,16 +45,19 @@
               rel="noopener noreferrer"><Yellow>Aalto University</Yellow></a
             > with a background in competitive programming (NCPC winner, IOI team
             🇫🇮).
+            Previously I worked at
+            <a
+              href="https://hamina.com"
+              target="_blank"
+              rel="noopener noreferrer"><Yellow>Hamina Wireless</Yellow></a
+            >
+            as a machine learning engineer.
           </p>
           <p>
             Recently I've been excited about <a href="/rejection-therapy"
               ><Yellow>talking to strangers</Yellow></a
             >, being more social and overall living a less predictable life that
             way!
-          </p>
-            If anything on this website seems interesting to you, feel free to send me an <a href="mailto:simo.simojoki@gmail.com"><Yellow>email</Yellow></a>.
-          <p>
-
           </p>
         </div>
       </div>
