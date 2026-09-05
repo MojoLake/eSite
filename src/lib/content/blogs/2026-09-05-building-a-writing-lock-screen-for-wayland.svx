@@ -1,0 +1,42 @@
+---
+title: "Building a writing lock screen for Wayland"
+date: "2026-09-05"
+summary: "A technical overview of Anvi, a Wayland lock screen that makes me write before returning to my laptop."
+tags: ["wayland", "programming", "writing"]
+published: true
+---
+
+I'm building a lock screen for Wayland that only lets you back into your computer after you have typed a certain number of words. The number of words will be configurable by the user. The idea is similar to Cold Turkey Writer, but implemented as a Wayland lock screen.
+
+My motivation is simple: I want to create more than I consume, and writing is a good way of creating. Locking my screen frees me from all the distractions on my laptop. It unchains my brain from the invisible forces that prevent it from entering a writing flow state. When the only option is to write, writing becomes very enjoyable.
+
+Here is a quick technical overview of what I have implemented so far and how it works.
+
+## The current state
+
+At the moment, I can lock the screen and type onto a black background. There is no line wrapping or much else that a proper text editor requires. It is very crude. Pressing `q` exits the lock screen; eventually, the exit condition will instead be reaching the required number of words.
+
+## The main loop
+
+At a high level, the application works like this:
+
+1. Set up the application state.
+2. Enter a loop.
+3. Call `wl_display_dispatch`, which blocks until the compositor sends useful information.
+4. Let libwayland invoke the necessary callbacks to update the application state.
+5. Draw the screen based on the updated state.
+6. Check the exit condition and release the lock if it has been fulfilled.
+
+This flow is clearly visible in the relatively simple `main.c`. Most of the application's real logic lives in its callback functions and their helpers.
+
+## Globals and callbacks
+
+The first thing a Wayland application needs to do is register globals. Globals are the objects and services advertised by the compositor.
+
+When using libwayland, the application then needs to handle callbacks. Libwayland invokes the appropriate callback when, for example, a key or modifier is pressed or the screen geometry changes. These callbacks contain the core of the application's logic.
+
+## One interesting detail
+
+Most communication between the compositor and a client application happens through Unix sockets. The pixels to be drawn, however, are communicated through a shared memory pool. Sending that amount of data continuously through Unix sockets would be too slow.
+
+The lock screen is still primitive, but the important foundation now works: it can take control of the screen, receive keyboard input, draw content, and eventually release the lock when a condition is met.
