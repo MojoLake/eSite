@@ -1,7 +1,7 @@
 ---
-title: "Building a writing lock screen for Wayland"
+title: "Building Anvi, a writing lock screen for Wayland"
 date: "2026-09-05"
-summary: "A technical overview of Anvi, a Wayland lock screen that makes me write before returning to my laptop."
+summary: "I want to create more than you consume. Introducing Anvi, a tool that will help me achieve this"
 tags: ["wayland", "programming", "writing"]
 published: true
 ---
