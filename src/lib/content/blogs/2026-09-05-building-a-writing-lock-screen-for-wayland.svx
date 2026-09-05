@@ -6,37 +6,103 @@ tags: ["wayland", "programming", "writing"]
 published: true
 ---
 
-I'm building a lock screen for Wayland that only lets you back into your computer after you have typed a certain number of words. The number of words will be configurable by the user. The idea is similar to Cold Turkey Writer, but implemented as a Wayland lock screen.
+### What?
+I'm building a lockscreen for Wayland that only lets you in after you have typed a certain number of words (user configurable). This is in the same spirit as Cold Turkey Writer but for Wayland.
 
-My motivation is simple: I want to create more than I consume, and writing is a good way of creating. Locking my screen frees me from all the distractions on my laptop. It unchains my brain from the invisible forces that prevent it from entering a writing flow state. When the only option is to write, writing becomes very enjoyable.
+### Why?
+The motivation for me is that I want to create more than I consume, and writing is a good way of creating. By locking my screen I free myself of all the distractions that my laptop has. This unchains my brain from the invisible chains that prevent it from getting into a writing flow state. When the only option is to write, writing becomes very enjoyable.
 
-Here is a quick technical overview of what I have implemented so far and how it works.
+Anyway I'll write a quick technical overview of what I have implemented so far and how it works.
 
-## The current state
+### Technical overview
+Currently I'm able to lock the screen and type to a black background. There is no line wrapping or anything that a text editor requires. Very crude. By pressing 'q' you can exit the lock screen (in the future the condition for exiting the lock screen is the number of words written).
 
-At the moment, I can lock the screen and type onto a black background. There is no line wrapping or much else that a proper text editor requires. It is very crude. Pressing `q` exits the lock screen; eventually, the exit condition will instead be reaching the required number of words.
+On a high-level the application works like this:
+1. setup application state
+2. run a while loop:
+    - call wl_display_dispatch (blocking until compositor sends some useful information)
+        - It will call the necessary callback functions for updating the state.
+    - Draw the screen based on current state.
+    - Check for exit condition, release lock if fulfilled.
 
-## The main loop
+This is all very clearly visible in the simple main.c.
 
-At a high level, the application works like this:
+```c
+#define _GNU_SOURCE 200112L // Right now Linux only? (gnu only)
 
-1. Set up the application state.
-2. Enter a loop.
-3. Call `wl_display_dispatch`, which blocks until the compositor sends useful information.
-4. Let libwayland invoke the necessary callbacks to update the application state.
-5. Draw the screen based on the updated state.
-6. Check the exit condition and release the lock if it has been fulfilled.
+#include <stdio.h>
+#include <stdlib.h>
+#include <sys/mman.h>
+#include <unistd.h>
 
-This flow is clearly visible in the relatively simple `main.c`. Most of the application's real logic lives in its callback functions and their helpers.
+#include <wayland-client.h>
 
-## Globals and callbacks
+#include "ext-session-lock-v1-client-protocol.h"
 
-The first thing a Wayland application needs to do is register globals. Globals are the objects and services advertised by the compositor.
+#include "app.h"
+#include "log.h"
+#include "output.h"
+#include "buffer.h"
+#include "keyboard.h"
+#include "session_setup.h"
 
-When using libwayland, the application then needs to handle callbacks. Libwayland invokes the appropriate callback when, for example, a key or modifier is pressed or the screen geometry changes. These callbacks contain the core of the application's logic.
 
-## One interesting detail
+int exit_with_failure_and_message(char* msg) {
+    fprintf(stderr, "%s", msg);
+    return EXIT_FAILURE;
+}
 
-Most communication between the compositor and a client application happens through Unix sockets. The pixels to be drawn, however, are communicated through a shared memory pool. Sending that amount of data continuously through Unix sockets would be too slow.
 
-The lock screen is still primitive, but the important foundation now works: it can take control of the screen, receive keyboard input, draw content, and eventually release the lock when a condition is met.
+int main(void) {
+
+    struct anvi_state state = {0};
+
+    if (setup_initial_state(&state) == EXIT_FAILURE) {
+        return EXIT_FAILURE;
+    }
+
+    anvi_log_info("Initial state setup successfully.\n");
+
+    while (true) {
+        if (wl_display_dispatch(state.display) < 0) {
+            fprintf(stderr, "Wayland event dispatch failed...\n");
+            break;
+        }
+
+        for (struct anvi_output *output = state.outputs; output != NULL; output = output->next) {
+            draw_screen(&state, output);
+        }
+
+        if (state.session_is_finished) {
+            if (state.session_is_locked) {
+                ext_session_lock_v1_unlock_and_destroy(state.session_lock);
+            } else {
+                ext_session_lock_v1_destroy(state.session_lock);
+            }
+            state.session_lock = NULL;
+            break;
+        }
+
+        if (state.session_is_locked && anvi_keyboard_key_was_pressed(state.keyboard)) {
+            ext_session_lock_v1_unlock_and_destroy(state.session_lock);
+
+            state.session_lock = NULL;
+
+            wl_display_roundtrip(state.display);
+            break;
+        }
+    }
+
+    destroy_anvi_state(&state);
+    return EXIT_SUCCESS;
+}
+```
+
+The beef and details of the application are in the callback functions and their helpers.
+
+The first thing you need to do when implementing a Wayland application is registration of globals. Globals are objects and services advertised by the compositor.
+
+Then you need to handle callback functions (if using libwayland). The appropriate callback functions are called by libwayland when eg. keys or modifiers are pressed, screen geometry changes, etc.. So the callback functions are the beef of the logic here.
+
+### One interesting fact for the end:
+Most of the communication between the compositor and client application is done through Unix sockets but the communication of what pixels should be drawn is instead done via a shared memory pool. The reason for this is that Unix sockets would be too slow for sending this data continously.
