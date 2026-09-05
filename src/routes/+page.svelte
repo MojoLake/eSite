@@ -67,7 +67,7 @@
   {#if showContent}
     <div class="content-container" in:fade={{ duration: 1000 }}>
       <div class="column">
-        <h3><a href="/blogs" class="section-link">Blogs</a></h3>
+        <h3><a href="/blogs" class="section-link">Selected Writing</a></h3>
         <ListComponent
           items={posts}
           basePath="blogs"
@@ -89,7 +89,7 @@
   {:else}
     <div class="content-container" style="opacity: 0;">
       <div class="column">
-        <h3><a href="/blogs" class="section-link">Blogs</a></h3>
+        <h3><a href="/blogs" class="section-link">Selected Writing</a></h3>
         <ListComponent
           items={posts}
           basePath="blogs"
