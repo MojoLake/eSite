@@ -12,6 +12,11 @@ I'm building a lockscreen for Wayland that only lets you in after you have typed
 ### Why?
 The motivation for me is that I want to create more than I consume, and writing is a good way of creating. By locking my screen I free myself of all the distractions that my laptop has. This unchains my brain from the invisible chains that prevent it from getting into a writing flow state. When the only option is to write, writing becomes very enjoyable.
 
+<video controls playsinline preload="metadata" aria-label="Anvi lock screen demo" style="width: 100%; height: auto;">
+  <source src="/blog-assets/anvi-v0.1-demo.mp4" type="video/mp4" />
+  <a href="/blog-assets/anvi-v0.1-demo.mp4">Watch the Anvi demo video</a>
+</video>
+
 Anyway I'll write a quick technical overview of what I have implemented so far and how it works.
 
 ### Technical overview
@@ -106,3 +111,5 @@ Then you need to handle callback functions (if using libwayland). The appropriat
 
 ### One interesting fact for the end:
 Most of the communication between the compositor and client application is done through Unix sockets but the communication of what pixels should be drawn is instead done via a shared memory pool. The reason for this is that Unix sockets would be too slow for sending this data continously.
+
+[The source code for Anvi is available on GitHub.](https://github.com/MojoLake/anvi)
