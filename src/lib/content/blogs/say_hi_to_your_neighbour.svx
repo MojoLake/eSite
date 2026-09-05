@@ -4,6 +4,7 @@ date: "2026-02-15"
 summary: "Short story of neighbourly kindness"
 tags: ["life"]
 published: true
+selected: true
 ---
 
 Two days ago when I came home, I noticed that something smelled really good behind my neighbour's door. Didn't do anything about it at first. 
@@ -20,7 +21,6 @@ To that I responded in my Finnish way "no no I don't need" (implying yes please 
 But, lo and behold, this evening I hear my doorbell ring. And it isn't any other than my smiling neighbour with a plate of food, offering it to me! And the food was delicious!
 
 Just wanted to share this story. Be kind to your neighbour!
-
 
 
 

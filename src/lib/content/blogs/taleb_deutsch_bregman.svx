@@ -4,6 +4,7 @@ date: "2026-02-13"
 summary: "What is good education? Discussing the connection between the works of Taleb, Deutsch and Bregman."
 tags: ["TDB"]
 published: true
+selected: true
 ---
 
 ### Taleb

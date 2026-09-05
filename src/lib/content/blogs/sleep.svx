@@ -4,6 +4,7 @@ date: "2025-10-27"
 summary: "I try to convince you to really, really put effort into getting quality sleep."
 tags: ["intro", "svelte"]
 published: true
+selected: true
 ---
 
 Sleep is important.
@@ -25,4 +26,3 @@ Most of these can also be found from a source such as [Sleep Foundation: Sleep H
 3. Don't have caffeine in your blood in the evening. In particular, don't drink coffee or energy drinks after 12pm.
 4. Make sure to get enough light into your eyes in the morning.
 5. Remember to break the rules above every once in a while and just enjoy life :)
-

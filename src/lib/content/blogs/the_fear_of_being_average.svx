@@ -5,6 +5,7 @@ summary: How to live a fulfilling life.
 tags:
 - life
 published: true
+selected: true
 substack_uploaded: true
 substack_status: published
 substack_draft_id: 191747488
@@ -36,7 +37,6 @@ Have a fulfilling life everyone!
 -elias
 
 [the video](https://www.youtube.com/watch?v=BLl3xREFEsY)
-
 
 
 

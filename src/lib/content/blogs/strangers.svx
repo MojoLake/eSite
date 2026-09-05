@@ -4,6 +4,7 @@ date: "2026-01-17"
 summary: "My experience of talking to strangers and how much it has given me."
 tags: ["intro", "svelte"]
 published: true
+selected: true
 ---
 
 I'm terrified of talking to strangers.
@@ -48,4 +49,3 @@ restaurant, I _will_ go talk to someone (unless I have an interesting book I rea
 <br>
 
 I think I will write more about this in the future. Doing scary things like this can have such a boost to one's life.
-

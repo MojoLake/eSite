@@ -10,6 +10,7 @@ export type PostMeta = {
   language?: PostLanguage;
   kind?: PostKind;
   published?: boolean;
+  selected?: boolean;
 };
 
 export type Post = {
@@ -42,9 +43,10 @@ const loadAllPostsOnce = (): PostMeta[] => {
       tags,
       language,
       kind,
-      published = false
+      published = false,
+      selected = false
     } = mod.metadata || {}; // assume not published if not marked
-    return { slug, title, date, summary, tags, language, kind, published } satisfies PostMeta;
+    return { slug, title, date, summary, tags, language, kind, published, selected } satisfies PostMeta;
   })
   .filter(p => p.title && p.date && p.published !== false)
   .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());

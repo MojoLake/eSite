@@ -72,8 +72,9 @@
           items={posts}
           basePath="blogs"
           itemType="post"
-          showCount={5}
+          showCount={-1}
         />
+        <a href="/blogs" class="all-posts-link">All posts →</a>
       </div>
       <div class="column">
         <h3><a href="/projects" class="section-link">Projects</a></h3>
@@ -81,7 +82,7 @@
           items={projects}
           basePath="projects"
           itemType="project"
-          showCount={5}
+          showCount={-1}
         />
       </div>
     </div>
@@ -95,6 +96,7 @@
           itemType="post"
           showCount={5}
         />
+        <a href="/blogs" class="all-posts-link">All posts →</a>
       </div>
       <div class="column">
         <h3><a href="/projects" class="section-link">Projects</a></h3>
@@ -191,6 +193,17 @@
   }
 
   .section-link:hover {
+    text-decoration: underline;
+  }
+
+  .all-posts-link {
+    display: inline-block;
+    margin: 1rem 0.5rem 0;
+    color: var(--secondary-text-colour);
+    text-decoration: none;
+  }
+
+  .all-posts-link:hover {
     text-decoration: underline;
   }
 

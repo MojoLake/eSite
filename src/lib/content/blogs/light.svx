@@ -4,6 +4,7 @@ date: "2025-10-28"
 summary: "I discuss the importance of light for our health from a North-European point of view."
 tags: [ "svelte", "sleep" ]
 published: true
+selected: true
 ---
 
 Necessary prerequisite:
@@ -60,4 +61,3 @@ have to switch it on in the morning.
 
 
 [1] https://genomebiology.biomedcentral.com/articles/10.1186/s13059-014-0499-7
-

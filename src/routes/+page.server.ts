@@ -3,7 +3,9 @@ import { getAllProjects } from '$lib/server/projects';
 
 export const load = async() => {
   return { 
-    posts: getAllPosts().filter((post) => !isSpanishPost(post) && !isHiddenPost(post)),
+    posts: getAllPosts().filter(
+      (post) => post.selected && !isSpanishPost(post) && !isHiddenPost(post)
+    ),
     projects: getAllProjects()
   };
 };
