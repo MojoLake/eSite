@@ -109,6 +109,9 @@ The first thing you need to do when implementing a Wayland application is regist
 
 Then you need to handle callback functions (if using libwayland). The appropriate callback functions are called by libwayland when eg. keys or modifiers are pressed, screen geometry changes, etc.. So the callback functions are the beef of the logic here.
 
+### Rendering
+I think it is really cool that the API I get for rendering everything is just a memory pool of pixel values and I can myself decide the value of every pixel. I decided not to myself implement text rendering (weak, I know...) so I used a C-library called cairo to do it.
+
 ### One interesting fact for the end:
 Most of the communication between the compositor and client application is done through Unix sockets but the communication of what pixels should be drawn is instead done via a shared memory pool. The reason for this is that Unix sockets would be too slow for sending this data continously.
 
