@@ -1,4 +1,5 @@
 import type { PageServerLoad } from './$types';
+import { error } from '@sveltejs/kit';
 import { getPost } from '$lib/server/posts';
 
 export const load: PageServerLoad = async ({ params }) => {
@@ -8,8 +9,7 @@ export const load: PageServerLoad = async ({ params }) => {
   }
   const post = await getPost(params.slug);
   if (!post) {
-    console.log("Post is null!");
-    return null;
+    error(404, 'Post not found');
   }
   console.log(`Post content: ${post.content}`);
   return {
