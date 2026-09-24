@@ -1,0 +1,18 @@
+---
+title: "updating agents md"
+date: "2026-09-24"
+summary: ""
+tags: []
+published: true
+---
+
+Often when a coding agent did something I didn't like, I ask it to introspect why it did so and how we could improve some AGENTS.md -file or a skill so this wouldn't happen in the future. Often it suggests some edit to one of the instruction files.
+
+Before, I would just read the suggestion and if it makes sense, accept it. But there is no guarantee of the change being an improvement.
+
+A better way is to ask the agent to make the edit and then ask it to spin up 3 independent sub-agents with a similar task and see if the updated instructions actually make the sub-agents behave in the desired way (of course wihout mentioning that edits have been made and that it's a test). The main agent reports back the results and we can decide to keep or discard the edits.
+
+I read this idea from Thorsten Ball's Joy & Curiosity newsletter.
+
+It's a kind of a mini-eval for the instruction files. Now that software engineering is increasingly being automated, it is important for the testing of the software to be increasingly automated as well. But this is testing the creation of softwar, the AGENTS.md files and how they interact with the agents. Are AGENTS.md files software? IDK, but they must be tested.
+
