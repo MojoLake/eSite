@@ -1,0 +1,67 @@
+---
+title: "Seventh day?"
+date: "2026-11-12"
+summary: ""
+tags: []
+published: true
+---
+
+Adding some Grafana graphs.
+
+- Per worker cache read location graph.
+- SGLang HiCache (L2) read (copy) time per worker.
+- KV Read speed from Mooncake, by worker.
+
+
+What is the point of KV pages requested per mooncake read batch? Or does HiCache (or mooncake Master?) first check that everything that it is requesting should be in Mooncake or does it just ask for the whole prompt even if it hasn't checked if it should be in Mooncake?
+
+
+To Anki:
+
+
+
+
+## Building my own inference engine in Zig.
+
+Pieces:
+- Model loading
+- Model execution
+- Compute backend / kernels
+- Memory management
+- Scheduler / execution loop.
+- Tokenization and generation.
+- Distributed execution
+- Serving interface and observability
+
+
+Token IDs -> correct logits. 
+
+
+Thoughts on AI and mathematics.
+Recently we have seen AI's be able to solve millenium prize problems. Mathematics problems that have remained unsolved for decades, despite brilliant human mathematicians excerting their intelligence on these fundamental questions of mathematics.
+
+While impressive, the "solutions" have been very "robotic", very AIish. Either counterexamples or cold brute force Lean calculations. Nothing beatiful, such as coming up with a new beatiful mathematical structure and proving properties of it. Or combining two distinct areas of mathematics together via a beatiful, and in the end natural, connection. Not to even mention coming up with a new branch of mathematics all in itself.
+
+Is this a problem? Does it really matter? I don't know but I think it does matter.
+
+It might be that at least current AI's are not capable of producing fundamentally new mathematical knowledge, only extending current mathematics in ways that are not necessarily trivial but don't require leaps of creativity either.
+
+If this is the case, then the question is:
+Will LLM's - as they are currently trained - generalize well enough with more training, data and better RL environments, to be able to create unique and novel ideas in mathematics?
+
+My current intuition says no.
+
+My thinking process is this:
+
+Human mathematicians don't randomly start at the frontier of mathematics and start proving things. Instead, they spend years getting themselves to the frontier by proving and thinking about increasingly more difficult problems. They don't just memorize the proofs and theorems. Instead, I believe that the best mathematicians tried to prove all theorems themselves _before_ even reading the theorems in the text book. At least this is what Terence Tao seems to have done. That is, they practise mathematics research itself. When they get to the frontier of mathematics, they have already experience and intuition in developing mathematics further.
+
+What do LLM's do? They just learn about all the theorems and I guess understand them. But they never get to develop a taste for developing mathematics?
+
+While writing this I realise that I'm wrong. We can just do RL environments where the LLM's need to prove theorems and push mathematics forward.
+
+But now I realise I'm right again:
+We can do those RL environments but if the LLM's already have the knowledge of all existing mathematics, then those are of little use. Thus, I believe that we should train an LLM with zero knowledge of mathematics. Somehow restrict the dataset not to include any mathematics in it. Then run some RL environments, starting from very simple things, like discovering the ideas of addittion and subtraction, then multiplication, then division, maybe geometry, at some point the Cartesian coordinate system, calculus, at some (ultimate?) point Group theory. Basically the whole history of mathematical discovery.
+
+At some point we have RL trained to rediscover all of modern mathematics from first principles. Then it should be capable of pushing it further, because we can spin out hundreds of thousands of these mathematicians who have already been able to discover all the mathematics we know, instead of just learning and memorizing it.
+
+Maybe I'm naive, idk. But I'm very persuaded by myself, I must say. On a separate note: I think my ability to persuade myself is my biggest strength and weakness. It makes me believe in myself but often results in me being very stupid as well.
