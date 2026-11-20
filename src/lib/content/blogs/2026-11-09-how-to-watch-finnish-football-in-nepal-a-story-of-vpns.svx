@@ -1,0 +1,61 @@
+---
+title: "How to watch football in Nepal and what it thought me about computer networking fundamentals"
+date: "2026-11-09"
+summary: ""
+tags: []
+published: true
+---
+
+Last Sunday was the last round of the Finnish football league Veikkausliiga. HJK and Inter were tied in points.
+
+HJK vs AC Oulu, Inter vs Kups. Played at the same time.
+
+My brother plays for HJK so I of course had to see the game. I was in Nepal so I couldn't be at the stadium but I planned to watch through the streaming service ruutu.fi, which has exclusive rights for streaming Veikkausliiga.
+
+Problem: ruutu.fi only allows streaming from EU countries.
+Solution: VPN in EU!
+
+Problem: ruutu.fi detected that I'm using a VPN.
+
+So I started to ponder: how does it detect that I'm using a VPN?
+
+Let's think about networking fundamentals.
+As I make a GET request to ruutu, they are able to see my (my VPN's) IP address. And that _should_ be the only information regarding location they can extract. There might be other clues though, like timezone.
+
+So, somehow just from the IP address, they are able to detect I'm using a VPN. This means that they probably have a list of known VPN IP addresses that they flag.
+
+Hence my first idea: I will setup my own VPN on my DigitalOcean VPS inside the EU and send my IP packets through that server.
+
+Didn't help :(. Ruutu noticed I'm using a VPN. My guess is that they also have a list of datacenter IP addresses that they flag, because why would anyone be watcing football from a datacenter?
+
+At this point I cursed myself for not having setup my own home server lab yet (on it though). I could have setup a VPN on that server, which has a normal household IP address, and send my IP packets through it.
+
+New idea: just ask my mom in Finland to set up her Macbook to function as a VPN. We did this using Tailscale. And ZÄDÄM! I was able to stream via Ruutu in Nepal!
+
+My mom left the Macbook charging and set some settings so the Macbook would say turned on and unlocked even while idle. This worked fine...
+
+...until the day of the game came and a few hours in advance I decided to double check everything worked fine. It didn't. The Macbook's Tailscale had turned off.
+
+I called my mom and asked her to turn it back on. Now it worked again. I thought the problem was just the Macbook going to sleep so I searched a couple more settings to change so the Macbook would stay on and unlocked indefinitely.
+
+It again worked for like an hour but then Tailscale shut down.
+
+It was only an hour until the start of the game and my mom had to leave to the stadium so we did our one final effort to keep the Macbook running: `caffeinate -i` in the terminal.
+
+I was sure it was going to work. And it did for perhaps 1.5 hours, so even partway into the start of the game (which me and my dad were not able to watch due to bad Wi-Fi in the restaurant xd). But then Tailscale disconnected and I checked: the Helsinki Macbook's Tailscale was off.
+
+Oh my days...
+
+Nothing I could do to fix the Macbook. But we had to watch the game.
+
+So I realised that I have friends.
+
+One of these friends could quickly setup a VPN on their laptops, so I started calling. First friend answered, but he was at a Fathers day dinner. Fathers day! Doesn't make things easier.
+
+Anyway I called a couple more friends but they were all busy. One friend asked why don't I just use Aalto VPN (my university's VPN). I explained to him that Ruutu.fi notices when I use a VPN.
+
+But after ending the call with him my dad asked if Ruutu.fi would _really_ block Aalto's IP address. I realised he was probably right, they wouldn't.
+
+So we set up Aalto VPN and TA-DA, we were finally able to watch the game.
+
+It was an exciting game that unfortunately ended 3-3 so HJK didn't win the title.
